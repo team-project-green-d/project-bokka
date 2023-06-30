@@ -31,7 +31,7 @@ export default function Header() {
             <div className={mainStyle['header-wrap']}>
                 <div className={mainStyle['header-logo']}>
                     <Link to='/home'>
-                        <img src="/img/bokka logo_kor01.jpg" alt="이미지" />
+                        <img src={process.env.PUBLIC_URL + '/img/bokka logo_kor01.jpg'} alt="이미지" />
                     </Link>
                 </div>
 
