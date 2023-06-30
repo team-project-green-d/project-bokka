@@ -183,7 +183,7 @@ export default function Home() {
     ]
 
     const unmarkGroup = (gName) => {
-        console.log(gName)
+        // console.log(gName)
         const newArray = markData.filter(s => s !== gName);
         dispatch(updateMark(newArray));
     }

@@ -10,7 +10,7 @@ import list from '../css/list.module.scss'
 
 import { FaBeer } from 'react-icons/fa';
 import { RxDoubleArrowLeft, RxDoubleArrowRight } from "react-icons/rx";
-import { BiBookmarkMinus, BiBookmarkPlus } from "react-icons/bi";
+import { BiBookmarkMinus, BiBookmarkPlus, BiCrown } from "react-icons/bi";
 import { FiPlus } from "react-icons/fi";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -20,6 +20,7 @@ import FriendProfileModal from '../components/FriendProfileModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { getfriendList } from '../slice/friendSlice';
 import AddGroupMember from '../components/AddGroupMember';
+import { LuCrown } from 'react-icons/lu';
 
 //더미데이터를 js에서도 쓰기 위해 전역에 꺼냄-날짜값 추가방법은 
 //date: [new Date("2023-06-23"),new Date("2023-06-07")] 처럼 배열로 만든다
@@ -323,7 +324,8 @@ export default function GroupDetail() {
                                                 <FriendProfileModal friend={selectGroup && selectGroup.gBoss} />
                                             </div>
                                         </div>
-                                        <p>{selectGroup && selectGroup.gBoss.nickname} ✨</p>
+                                        <p style={{display:'flex', justifyContent:'center', alignItems:'center'}}
+                                        >{selectGroup && selectGroup.gBoss.nickname}&nbsp; <BiCrown style={{color:'#5567b1'}}/></p>
                                     </li>
                                 }
                                 {

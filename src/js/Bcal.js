@@ -4,17 +4,31 @@ import { useState, useEffect } from "react";
 import ddd from "../css/ddd.module.scss";
 
 export default function Customdatecelwrapper(props) {
-  const daysA = [
-    new Date("2023-07-25"),
-    new Date("2023-06-25"),
-    new Date("2023-06-17"),
-    new Date("2023-06-01"),
-    new Date("2023-07-01"),
-    new Date("2023-05-21"),
-    new Date("2023-07-05"),
-    new Date("2023-06-08"),
-    new Date("2023-08-05"),
-  ];
+
+  const groupData = JSON.parse(sessionStorage.getItem("group"));
+
+  let dayconcat = [];
+  let finalget = [];
+  const getappoint = groupData && groupData.map((data) => data.gAppoint);
+  // console.log(getappoint)
+  getappoint && getappoint.forEach((date) => finalget.push(...date));
+  // console.log(finalget)
+  const ffnalget = finalget.map((date) => new Date(date.time));
+  // console.log(ffnalget)
+  const daysA = dayconcat.concat(ffnalget);
+  // console.log(daysA);
+
+  // const daysA = [
+  //   new Date("2023-07-25"),
+  //   new Date("2023-06-25"),
+  //   new Date("2023-06-17"),
+  //   new Date("2023-06-01"),
+  //   new Date("2023-07-01"),
+  //   new Date("2023-05-21"),
+  //   new Date("2023-07-05"),
+  //   new Date("2023-06-08"),
+  //   new Date("2023-08-05"),
+  // ];
 
   let [daysB, setDaysB] = useState([
     new Date("2023-06-20"),
@@ -51,15 +65,24 @@ export default function Customdatecelwrapper(props) {
 
   const dayArrayA = [];
 
-  for (let i = 0; i < daysA.length; i++) {
-    let bool =
-      daysA[i].getDate() === props.value.getDate() &&
-      daysA[i].getMonth() === props.value.getMonth() &&
-      daysA[i].getFullYear() === props.value.getFullYear();
-    dayArrayA.push(bool);
+  {
+    if (daysA != []) {
+      for (let i = 0; i < daysA.length; i++) {
+        let bool =
+          daysA[i].getDate() === props.value.getDate() &&
+          daysA[i].getMonth() === props.value.getMonth() &&
+          daysA[i].getFullYear() === props.value.getFullYear();
+        dayArrayA.push(bool);
+      }
+    } else {
+      let bool = false;
+      dayArrayA.push(bool);
+    }
   }
-  const sumA = dayArrayA.reduce((previous, current) => previous || current);
-
+  let sumA = [];
+  if (dayArrayA && dayArrayA.length > 0) {
+    sumA = dayArrayA.reduce((previous, current) => previous || current);
+  }
   const dayArrayB = [];
   for (let i = 0; i < daysB.length; i++) {
     let bool =
@@ -99,7 +122,7 @@ export default function Customdatecelwrapper(props) {
     console.log(daysB);
   }, [daysB]);
   */
-  return sumA ? (
+  return sumA === true ? (
     <div className={`rbc-day-bg special-day`}></div>
   ) : (
     <div

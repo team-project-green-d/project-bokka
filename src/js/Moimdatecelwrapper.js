@@ -24,7 +24,7 @@ export default function customdatecelwrapper(props) {
   // const dayconcat = seeAcal ? daysA : daysB;
   const daysA = [
     // new Date("2023-07-25"),
-    // new Date("2023-06-25"),
+    new Date("2023-02-01"),
     // new Date("2023-06-17"),
     // new Date("2023-06-01"),
     // new Date("2023-07-01"),
@@ -151,6 +151,9 @@ export default function customdatecelwrapper(props) {
         else bool = false;
         myDateArray.push(bool);
       }
+    } else {
+      let bool = false;
+      myDateArray.push(bool);
     }
   }
   const friendDateArray = [];
@@ -179,6 +182,9 @@ export default function customdatecelwrapper(props) {
         else bool = false;
         moinDateArray.push(bool);
       }
+    } else {
+      let bool = false;
+      myDateArray.push(bool);
     }
   }
 
@@ -228,7 +234,7 @@ export default function customdatecelwrapper(props) {
   // console.log(totalSubNum || moinDateNum)
   // console.log(moinDateNum)
 
-  return myDateNum || friendDateNum || moinDateNum === true ? (
+  return (myDateNum || friendDateNum || moinDateNum) === true ? (
     moinDateNum === true ?
       <div
         className="rbc-day-bg special-day onMoim"

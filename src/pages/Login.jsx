@@ -4,11 +4,11 @@ import loginStyle from '../css/login.module.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import { auth, db } from '../database/firebase';
-import { checkUser } from '../slice/userSlice';
+import { checkUser, userLogin } from '../slice/userSlice';
 import { useNavigate } from 'react-router-dom';
 import { getgroupList } from '../slice/groupSlice';
 import { getfriendList } from '../slice/friendSlice';
-import { collection, getDocs, or, orderBy, query, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, or, orderBy, query, where } from 'firebase/firestore';
 import { getappointmentList } from '../slice/appointmentSlice';
 import MainBg from '../components/MainBg';
 import { updateMark } from '../slice/markSlice';
@@ -29,6 +29,18 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    // 파이어베이스 유저 데이터 들고오기 함수
+    async function getUserData(user) {
+        const docSnap = await getDoc(doc(db, "users", user.uid));
+        if (docSnap.exists()) {
+            // console.log("Document data:", docSnap.data());
+            // 리덕스 업데이트
+            dispatch(userLogin(docSnap.data()))
+        } else {
+            // docSnap.data() will be undefined in this case
+            console.log("No such document!");
+        }
+    }
     // 파이어베이스 친구 데이터 들고오기 함수
     const getFriendData = async (uid) => {
         let friendArray = [];
@@ -38,7 +50,7 @@ export default function Login() {
         querySnapshot.forEach((doc) => {
             friendArray.push({
                 ...doc.data(),
-                startDate : new Date(doc.data().startDate.seconds * 1000 + doc.data().startDate.nanoseconds / 1000000)
+                startDate: new Date(doc.data().startDate.seconds * 1000 + doc.data().startDate.nanoseconds / 1000000)
             });
         });
         dispatch(getfriendList(friendArray));
@@ -60,7 +72,7 @@ export default function Login() {
             groupArray.push({
                 gid: doc.id,
                 ...doc.data(),
-                startDate : new Date(doc.data().startDate.seconds * 1000 + doc.data().startDate.nanoseconds / 1000000)
+                startDate: new Date(doc.data().startDate.seconds * 1000 + doc.data().startDate.nanoseconds / 1000000)
             });
         });
         dispatch(getgroupList(groupArray));
@@ -68,18 +80,18 @@ export default function Login() {
 
         const handleDateSort = () => {
             const groupData = JSON.parse(sessionStorage.getItem('group'));
-                const startdateDown = [...groupData].sort((a, b) => {
-                    const aDate = new Date(a.startDate.seconds * 1000 + a.startDate.nanoseconds / 1000000)
-                    const bDate = new Date(b.startDate.seconds * 1000 + b.startDate.nanoseconds / 1000000)
-                    // console.log(aDate-bDate);
-                    // console.log(new Date(a.startDate) - new Date(b.startDate))
-                    if (isNaN(aDate - bDate)==true) {
-                        return new Date(a.startDate) - new Date(b.startDate);
-                    } else {
-                        return aDate - bDate;
-                    }
-                });
-                dispatch(getgroupList(startdateDown));
+            const startdateDown = [...groupData].sort((a, b) => {
+                const aDate = new Date(a.startDate.seconds * 1000 + a.startDate.nanoseconds / 1000000)
+                const bDate = new Date(b.startDate.seconds * 1000 + b.startDate.nanoseconds / 1000000)
+                // console.log(aDate-bDate);
+                // console.log(new Date(a.startDate) - new Date(b.startDate))
+                if (isNaN(aDate - bDate) == true) {
+                    return new Date(a.startDate) - new Date(b.startDate);
+                } else {
+                    return aDate - bDate;
+                }
+            });
+            dispatch(getgroupList(startdateDown));
         }
         handleDateSort();
     };
@@ -100,6 +112,7 @@ export default function Login() {
                     nickname: user.displayName,
                     photo: user.photoURL,
                 }));
+                getUserData(user);
 
                 getFriendData(user.uid);
 
@@ -172,11 +185,11 @@ export default function Login() {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
-                if (errorCode=='auth/weak-password') {
+                if (errorCode == 'auth/weak-password') {
                     alert('6자리 이상의 비밀번호를 사용해 주세요!')
-                } else if (errorCode=='auth/email-already-in-use') {
+                } else if (errorCode == 'auth/email-already-in-use') {
                     alert('이미 가입한 유저입니다!');
-                } 
+                }
             });
     }
 
@@ -185,6 +198,7 @@ export default function Login() {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
+
                 dispatch(checkUser({
                     uid: user.uid,
                     email: user.email,
@@ -197,6 +211,8 @@ export default function Login() {
                     myCid: user.myCid,
                     todoid: user.todoid,
                 }));
+
+                getUserData(user);
 
                 getFriendData(user.uid);
 
@@ -228,7 +244,7 @@ export default function Login() {
     return (
         <div>
 
-            <div className={loginStyle['main-bg']}><MainBg/></div>
+            <div className={loginStyle['main-bg']}><MainBg /></div>
 
             {/* <div className={`${mainStyle['wrap']} ${loginStyle['login-content']}`}> */}
             <div className={loginStyle['login-content']}>
