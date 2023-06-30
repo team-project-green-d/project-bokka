@@ -317,6 +317,7 @@ export default function MyPage() {
                                             <div className={`${mypage[`calendar-title-wrap`]}`}>
                                                 <div
                                                     onClick={() => {
+                                                        nowdayA.setDate(1)
                                                         setNowdayA(new Date(nowdayA.setMonth(nowdayA.getMonth() - 1)));
                                                     }}
                                                 >
@@ -325,6 +326,7 @@ export default function MyPage() {
                                                 <h4>캘린더 A</h4>
                                                 <div
                                                     onClick={() => {
+                                                        nowdayA.setDate(1)
                                                         setNowdayA(new Date(nowdayA.setMonth(nowdayA.getMonth() + 1)));
                                                     }}
                                                 >
@@ -340,6 +342,7 @@ export default function MyPage() {
                                             <div className={`${mypage[`calendar-title-wrap`]} ${mypage[`calendar-b-box`]}`}>
                                                 <div
                                                     onClick={() => {
+                                                        nowdayB.setDate(1)
                                                         setNowdayB(new Date(nowdayB.setMonth(nowdayB.getMonth() - 1)));
                                                     }}
                                                 >
@@ -348,6 +351,7 @@ export default function MyPage() {
                                                 <h4>캘린더 B</h4>
                                                 <div
                                                     onClick={() => {
+                                                        nowdayB.setDate(1)
                                                         setNowdayB(new Date(nowdayB.setMonth(nowdayB.getMonth() + 1)));
                                                     }}
                                                 >
