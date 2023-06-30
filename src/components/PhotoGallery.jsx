@@ -12,14 +12,14 @@ import { GrClose } from "react-icons/gr";
 export default function PhotoGallery() {
   const fileInputRef = useRef(null);
   const [images, setImages] = useState([
-    "/img/group_photo_01.jpg",
-    "/img/group_photo_02.jpg",
-    "/img/group_photo_03.jpg",
-    "/img/group_photo_04.jpg",
-    "/img/group_photo_05.jpg",
-    "/img/group_photo_06.jpg",
-    "/img/group_photo_07.jpg",
-    "/img/group_photo_08.jpg",
+    `${process.env.PUBLIC_URL}/img/group_photo_01.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_02.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_03.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_04.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_05.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_06.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_07.jpg`,
+    `${process.env.PUBLIC_URL}/img/group_photo_08.jpg`,
   ]);
   const [showPopup, setShowPopup] = useState(false);
 

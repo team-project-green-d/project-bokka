@@ -36,28 +36,28 @@ const RollingLeft2 = () => {
         <div className={styles.rolling} ref={rollerBoxRef}>
             <div className={styles.expertise} ref={rollerRef}>
                 <ul className={styles.expertise_wrap}>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/mmtc-05.png" alt="로고" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/mmtc-06.png" alt="로고" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-05.png`} alt="로고" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-06.png`} alt="로고" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                 </ul>
             </div>
             <div className={`${styles.expertise} ${styles.clone}`} ref={cloneRef}>
                 <ul className={styles.expertise_wrap}>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/mmtc-07.png" alt="로고" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/mmtc-08.png" alt="로고" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
-                    <li><img src="/img/bokka_symbol_subcolor.svg" alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-07.png`} alt="로고" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-08.png.png`} alt="로고" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                 </ul>
             </div>
         </div>

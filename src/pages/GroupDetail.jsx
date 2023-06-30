@@ -28,7 +28,7 @@ export const friendArray = [
         id: 1,
         name: "장은희",
         // photo : photo_a,
-        photo: '/img/m-left-01.png',
+        photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
         email: "eh@bokka.com",
         date: [new Date("2023-06-23"),new Date("2023-06-21"),new Date("2023-06-06")
         ,new Date("2023-06-30"),new Date("2023-06-08"),new Date("2023-06-16"),
@@ -42,7 +42,7 @@ export const friendArray = [
         id: 2,
         name: "전하슬린",
         email: "sl@bokka.com",
-        photo: '/img/mmtc-03.png',
+        photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
         date: [new Date("2023-06-23"), new Date("2023-06-07"), new Date("2023-05-23"),
         new Date("2023-06-15"),new Date("2023-06-28"),new Date("2023-06-12"),
         new Date("2023-06-13"),new Date("2023-05-28"),new Date("2023-07-01"),
@@ -56,7 +56,7 @@ export const friendArray = [
         id: 3,
         name: "김영환",
         email: "yh@bokka.com",
-        photo: '/img/mmtc-07.png',
+        photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
         date: [new Date("2023-06-21"), new Date("2023-06-01"), new Date("2023-07-03"),
         new Date("2023-06-04"),new Date("2023-06-27"),new Date("2023-06-26"),
         new Date("2023-06-18"),new Date("2023-07-04"),new Date("2023-07-06"),
@@ -69,7 +69,7 @@ export const friendArray = [
         id: 4,
         name: "허대욱",
         email: "du@bokka.com",
-        photo: '/img/mmtc-08.png',
+        photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
         date: [new Date("2023-06-24"), new Date("2023-06-01"), new Date("2023-05-29"),
         new Date("2023-06-02"),new Date("2023-06-22"),new Date("2023-06-14"),
         new Date("2023-06-25"),new Date("2023-06-10"),new Date("2023-07-07"),
@@ -104,7 +104,7 @@ export default function GroupDetail() {
             id: 1,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -113,7 +113,7 @@ export default function GroupDetail() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -121,7 +121,7 @@ export default function GroupDetail() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님이 모임에 초대되었습니다"
         },
         {
@@ -129,14 +129,14 @@ export default function GroupDetail() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 사진을 등록했습니다"
         },
         {
             id: 5,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -145,7 +145,7 @@ export default function GroupDetail() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -153,7 +153,7 @@ export default function GroupDetail() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님이 모임에 초대되었습니다"
         },
         {
@@ -161,7 +161,7 @@ export default function GroupDetail() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 사진을 등록했습니다"
         }
     ];
