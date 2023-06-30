@@ -66,7 +66,7 @@ const Modal = () => {
     // 검색한 친구 선택 함수
     const selectFriend = () => {
         // 이미 추가된 친구일 경우 추가(선택) 안 됨. 메세지 띄우기
-        console.log(searchF.email);
+        // console.log(searchF.email);
         const checkFriend = async () => {
             const friendRef = collection(db, "friends", user.uid, "friendList");
             const q = query(friendRef, where("fEmail", "==", searchF.email));
@@ -101,7 +101,7 @@ const Modal = () => {
                 ...doc.data(),
             });
         });
-        console.log(friend)
+        // console.log(friend)
         //        setFriendList(friendArray);
     };
 
@@ -116,7 +116,7 @@ const Modal = () => {
                 fName: selectF.nickname,
                 fEmail: selectF.email,
                 photo: selectF.photo,
-                birthday: selectF.birthday,
+                birthday: (selectF.birthday ? selectF.birthday : ''),
                 showCalA: selectA,
                 lastDate: null,
                 meetCount: 0,
@@ -131,7 +131,7 @@ const Modal = () => {
                 fName: selectF.nickname,
                 fEmail: selectF.email,
                 photo: selectF.photo,
-                birthday: selectF.birthday,
+                birthday: (selectF.birthday ? selectF.birthday : ''),
                 showCalA: selectA,
                 lastDate: null,
                 meetCount: 0,
@@ -139,7 +139,7 @@ const Modal = () => {
                 startDate: new Date(), // 친구 등록일은 친구가 수락하면 생성
             }))
             getFriendData();
-            console.log(friend);
+            // console.log(friend);
             closeModal();
         } catch (e) {
             console.error("Error adding document: ", e);

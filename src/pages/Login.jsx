@@ -42,7 +42,7 @@ export default function Login() {
             });
         });
         dispatch(getfriendList(friendArray));
-        console.log(friendArray);
+        // console.log(friendArray);
     };
     // 파이어베이스 그룹 데이터 들고오기 함수
     const getGroupData = async (uid) => {
@@ -172,7 +172,11 @@ export default function Login() {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
-                alert('6자리 이상의 비밀번호를 사용해 주세요!');
+                if (errorCode=='auth/weak-password') {
+                    alert('6자리 이상의 비밀번호를 사용해 주세요!')
+                } else if (errorCode=='auth/email-already-in-use') {
+                    alert('이미 가입한 유저입니다!');
+                } 
             });
     }
 
