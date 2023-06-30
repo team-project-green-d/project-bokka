@@ -166,7 +166,7 @@ const Modal = () => {
 
                                 <div className={tgl["content"]}>
 
-                                    <div className={tgl['modal-title']}>친구 추가</div>
+                                    <div className={tgl['modal-title']}>친구 신청</div>
                                     
                                     <div className={tgl['make-group']}>
 
@@ -209,12 +209,12 @@ const Modal = () => {
 
                                         </div>
 
-                                        <div className={`${mdl['modal-text']}`}>
+                                        <div className={`${mdl['add-f-modal-text']}`}>
                                             {
                                                 selectF ?
                                                     <p className={`${tgl['add-f-addfriend']}`}><b>{selectF.nickname}님</b>에게 친구신청을 하시겠습니까?</p>
                                                     :
-                                                    <p className={`${tgl['add-f-addfriend']}`}>친구의 이메일을 검색해 주세요</p>
+                                                    <p className={`${tgl['add-f-addfriend']}`}>Email을 검색 후 친구신청을 해보세요</p>
                                             }
                                         </div>
 

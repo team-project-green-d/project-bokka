@@ -317,23 +317,23 @@ export default function Home() {
                             </Link> */}
                             <li className={`${homeStyle['list-add-left']} ${mainStyle['color-box']}`}>
                                 <div className={`${modal['add-f-btn']}`}>
-                                    <div>
+                                    <div className={`${homeStyle['add-f-btn-box']}`}>
                                         <ul className={`${homeStyle['add-m-emoji']}`}>
                                             <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-15.png`} alt="로고" /></li>
                                             <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-11.png`} alt="로고" /></li>
-                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-10.png`} alt="로고" /></li>
                                             <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-23.png`} alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-10.png`} alt="로고" /></li>
                                         </ul>
                                         <div className={`${modal['btn-parent']}`}>
                                             <AddGroupSample />
                                         </div>
-                                        모임 추가
+                                        <div className={`${homeStyle['add-f-btn-text']}`}>모임 추가</div>
                                     </div>
                                 </div>
                             </li>
                             <li className={`${homeStyle['list-add-right']} ${mainStyle['color-box']}`}>
                                 <div className={`${modal['add-f-btn']}`}>
-                                    <div>
+                                    <div className={`${homeStyle['add-f-btn-box']}`}>
                                         <ul className={`${homeStyle['add-f-emoji']}`}>
                                             <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-14.png`} alt="로고" /></li>
                                             <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-22.png`} alt="로고" /></li>
@@ -341,7 +341,7 @@ export default function Home() {
                                         <div className={`${modal['btn-parent']}`}>
                                             <AddFriend />
                                         </div>
-                                        친구 추가
+                                        <div className={`${homeStyle['add-f-btn-text']}`}>친구 추가</div>
                                     </div>
                                 </div>
                             </li>

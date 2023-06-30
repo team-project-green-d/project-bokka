@@ -292,10 +292,20 @@ $sublightgray : #d4d4d4;
 .list-add-left:hover,
 .list-add-right:hover {
     background-color: $subColor;
-    line-height: 60px;
     transition: all 0.5s;
     color: $mainColor;
 }
+
+// .add-f-btn-text{
+//     background-color: aquamarine;
+//     transition: all 1s;
+// }
+
+// .list-add-left:hover .add-f-btn-text,
+// .list-add-right:hover .add-f-btn-text {
+//     opacity: 0;
+//     transition: all 1s;
+// }
 
 .add-m-emoji,
 .add-f-emoji{
@@ -303,15 +313,16 @@ $sublightgray : #d4d4d4;
     height: 30px;
     position: absolute;
     bottom: 20px;
-    left: 5%;
+    left: 3%;
     transform: translateY(55px);
     transition: all 1s;
     // border: 1px solid red;
 }
 
+
 .add-f-emoji{
     width: 80px;
-    left: 27%;
+    left: 26%;
 }
 
 .add-f-emoji li{
@@ -321,8 +332,8 @@ $sublightgray : #d4d4d4;
 
 
 .add-m-emoji li{
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     float: left;
     animation: symbol_move 1s ease-in-out infinite alternate;
 }
@@ -330,7 +341,7 @@ $sublightgray : #d4d4d4;
 .add-m-emoji li:nth-child(1),
 .add-m-emoji li:nth-child(3),
 .add-f-emoji li{
-    width: 38px;
+    width: 40px;
 }
 
 .add-m-emoji li:nth-child(2){
@@ -344,7 +355,7 @@ $sublightgray : #d4d4d4;
 
 .list-add-left:hover .add-m-emoji,
 .list-add-right:hover .add-f-emoji{
-    transform: translateY(0);
+    transform: translateY(-13px);
     transition: all 1s;
 }
 
