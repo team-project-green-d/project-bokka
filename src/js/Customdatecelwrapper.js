@@ -14,22 +14,44 @@ export default function Customdatecelwrapper(props) {
   const seeAcal = useSelector((state) => state.user.seeAcal);
   // console.log(seeAcal)
   const daysA = [
-    new Date("2023-07-25"),
-    new Date("2023-06-25"),
-    new Date("2023-06-17"),
-    new Date("2023-06-01"),
-    new Date("2023-07-01"),
-    new Date("2023-05-21"),
-    new Date("2023-07-05"),
-    new Date("2023-06-08"),
-    new Date("2023-08-05"),
+    // new Date("2023-07-25"),
+    // new Date("2023-06-25"),
+    // new Date("2023-06-17"),
+    // new Date("2023-06-01"),
+    // new Date("2023-07-01"),
+    // new Date("2023-05-21"),
+    // new Date("2023-07-05"),
+    // new Date("2023-06-08"),
+    // new Date("2023-08-05"),
   ];
   //B캘린더는 A캘린더보다 색칠되는 값이 많아야 하므로 더미데이터를 추가해놓음
   const daysB = daysA.concat([
-    new Date("2023-06-02"),
-    new Date("2023-07-03"),
-    new Date("2023-06-11"),
+    new Date("2023-06-20"),
+    new Date("2023-05-28"),
+    new Date("2023-06-04"),
+    new Date("2023-06-16"),
+    new Date("2023-05-29"),
+    new Date("2023-06-05"),
+    new Date("2023-06-14"),
+    new Date("2023-05-30"),
+    new Date("2023-06-07"),
     new Date("2023-06-13"),
+    new Date("2023-06-22"),
+    new Date("2023-05-31"),
+    new Date("2023-06-06"),
+    new Date("2023-06-20"),
+    new Date("2023-06-02"),
+    new Date("2023-06-12"),
+    new Date("2023-06-10"),
+    new Date("2023-06-24"),
+    new Date("2023-06-28"),
+    new Date("2023-06-21"),
+    new Date("2023-06-27"),
+    new Date("2023-06-11"),
+    new Date("2023-06-26"),
+    new Date("2023-06-29"),
+    new Date("2023-06-19"),
+    new Date("2023-06-23"),
   ]);
   //Home에서 dispatch로 seeAcal(bool값)을 변경해주고 true이면 daysA 배열로, false면 daysB 배열로 변경되도록 설정함
   const dayconcat = seeAcal ? daysA : daysB;
@@ -81,7 +103,7 @@ export default function Customdatecelwrapper(props) {
   //console.log(dayArray.map((bool) => bool));
   //최상단 배열의 인덱스마다 접근을 해서 true가 하나라도 있으면 true가 되도록 배열들을 다 합친다
   // setSum(dayArray.reduce((previous, current) => previous || current));
-  const sum = dayArray.reduce((previous, current) => previous || current);
+  // const sum = dayArray.reduce((previous, current) => previous || current);
   //최종 해당일에 약속이 있는지 없는지 확인할 수 있도록 콘솔에 출력
   //console.log(sum);
   //메인페이지,마이페이지 달력표시이므로 true이면 모임 페이지 상세 표시
@@ -90,8 +112,13 @@ export default function Customdatecelwrapper(props) {
 
   // console.log(sum)
   // console.log(props.value)
+  let sum = [];
+  if (dayArray && dayArray.length > 0) {
+    sum = dayArray.reduce((previous, current) => previous || current);
+  }
 
-  return sum ? (
+
+  return sum === true ? (
     // 약속 있는 날
     <div className="rbc-day-bg special-day">
       <SeeMoinModal date={props.value} />

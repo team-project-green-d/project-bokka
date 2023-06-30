@@ -300,19 +300,21 @@ export default function GroupDetail() {
 
                             <ul className={groupStyle['friend-list']}>
                                 {
-                                    memArray &&
-                                    memArray.map((f) =>
-                                        <li key={f.id}>
-                                            <div className={groupStyle['friend-list-box']}>
-                                                <div className={`${modal['btn-parent']}`}>
-                                                    {/* <FriendProfileModal name={f.name} /> */}
-                                                    <FriendProfileModal friend={f} />
-                                                </div>
-                                            </div>
-                                            <p>{f.name}</p>
-                                            {/* <div>{f.photo}</div> */}
-                                        </li>
-                                    )}
+                                    // 더미데이터 멤버
+                                    // memArray &&
+                                    // memArray.map((f) =>
+                                    //     <li key={f.id}>
+                                    //         <div className={groupStyle['friend-list-box']}>
+                                    //             <div className={`${modal['btn-parent']}`}>
+                                    //                 {/* <FriendProfileModal name={f.name} /> */}
+                                    //                 <FriendProfileModal friend={f} />
+                                    //             </div>
+                                    //         </div>
+                                    //         <p>{f.name}</p>
+                                    //         {/* <div>{f.photo}</div> */}
+                                    //     </li>
+                                    // )
+                                }
                                 {
                                     selectG &&
                                     <li>
