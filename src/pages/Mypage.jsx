@@ -152,8 +152,12 @@ export default function MyPage() {
     // 친구 프로필 모달 버튼
     const [showFP, setShowFP] = useState(false);
 
-    const [friendSample, setFriendSample] = useState(friendData);
+    const friendlist = friendData && [...friendData].sort((a, b) => {
+        return showBF ? b.meetCount - a.meetCount : a.meetCount - b.meetCount;
+    });
 
+    const [friendSample, setFriendSample] = useState(friendlist);
+    
     const handleSort = () => {
         const sorted = [...friendSample].sort((a, b) => {
             return showBF ? b.meetCount - a.meetCount : a.meetCount - b.meetCount;

@@ -105,65 +105,73 @@ export default function GroupDetail() {
             id: 1,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 2,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 3,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님이 모임에 초대되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님이 모임에 초대되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 4,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 사진을 등록했습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 사진을 등록했습니다",
+            birthday: '1993-03-27'
         },
         {
             id: 5,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 6,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 7,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님이 모임에 초대되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님이 모임에 초대되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 8,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 사진을 등록했습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 사진을 등록했습니다",
+            birthday: '1993-03-27'
         }
     ];
 
@@ -321,7 +329,14 @@ export default function GroupDetail() {
                                     <li>
                                         <div className={groupStyle['friend-list-box']}>
                                             <div className={`${modal['btn-parent']}`}>
-                                                <FriendProfileModal friend={selectGroup && selectGroup.gBoss} />
+                                                <FriendProfileModal friend={selectGroup && {
+                                                    fid: selectGroup.gBoss.uid,
+                                                    name: selectGroup.gBoss.nickname,
+                                                    photo: selectGroup.gBoss?.photo,
+                                                    email: selectGroup.gBoss.email,
+                                                    birthday: selectGroup.gBoss?.birthday,
+                                                    
+                                                }} />
                                             </div>
                                         </div>
                                         <p style={{display:'flex', justifyContent:'center', alignItems:'center'}}
