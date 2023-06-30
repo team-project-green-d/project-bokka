@@ -33,6 +33,7 @@ export default function FriendCalendarModal({friendName}) {
           <div className={friendcalendar["calendarheader"]}>
             <div
               onClick={() => {
+                nowdayB.setDate(1)
                 setNowdayB(new Date(nowdayB.setMonth(nowdayB.getMonth() - 1)));
               }}
             >
@@ -43,6 +44,7 @@ export default function FriendCalendarModal({friendName}) {
 
             <div
               onClick={() => {
+                nowdayB.setDate(1)
                 setNowdayB(new Date(nowdayB.setMonth(nowdayB.getMonth() + 1)));
               }}
             >

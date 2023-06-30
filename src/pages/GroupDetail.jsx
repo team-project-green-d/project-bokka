@@ -218,6 +218,10 @@ export default function GroupDetail() {
         // console.log(grouptitle)
     }, [group])
 
+    const dateone=()=>{
+        nowday.setDate(1);
+        nextday.setDate(1);
+    }
     return (
         <div className={mainStyle.wrap}>
             <div className={homeStyle['home-wrap']}>
@@ -232,11 +236,13 @@ export default function GroupDetail() {
                         <div className={homeStyle['left-top-right']}>
                             <div className={homeStyle['left-top-prev']}
                                 onClick={() => {
+                                    dateone()
                                     setNowday(new Date(nowday.setMonth(nowday.getMonth() - 2)));
                                     setNextday(new Date(nextday.setMonth(nextday.getMonth() - 2)));
                                 }}><RxDoubleArrowLeft /></div>
                             <div className={homeStyle['left-top-next']}
                                 onClick={() => {
+                                    dateone()
                                     setNowday(new Date(nowday.setMonth(nowday.getMonth() + 2)));
                                     setNextday(new Date(nextday.setMonth(nextday.getMonth() + 2)));
                                 }}><RxDoubleArrowRight /></div>
