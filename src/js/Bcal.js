@@ -1,6 +1,6 @@
 import CalenderModal from "../components/CalenderModal";
 import { useSelector } from "react-redux";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import ddd from "../css/ddd.module.scss";
 
 export default function Customdatecelwrapper(props) {
@@ -60,7 +60,7 @@ export default function Customdatecelwrapper(props) {
   }
   const sumA = dayArrayA.reduce((previous, current) => previous || current);
 
-  const dayArrayB=[];
+  const dayArrayB = [];
   for (let i = 0; i < daysB.length; i++) {
     let bool =
       daysB[i].getDate() === props.value.getDate() &&
@@ -70,13 +70,10 @@ export default function Customdatecelwrapper(props) {
   }
   const sumB = dayArrayB.reduce((previous, current) => previous || current);
 
-
   const clickCal = () => {
     if (
       window.confirm(
-        `해당 날짜를 약속 ${
-          sumB ? "없는" : "있는"
-        } 날로 변경하시겠습니까?`
+        `해당 날짜를 약속 ${sumB ? "없는" : "있는"} 날로 변경하시겠습니까?`
       )
     ) {
       setIsSpecialDay(!sumB);
@@ -87,7 +84,12 @@ export default function Customdatecelwrapper(props) {
         setDaysB(addarray);
       } else {
         let deletearray = [];
-        deletearray = daysB.filter((e) => (e.getFullYear()!==props.value.getFullYear()||e.getMonth()!==props.value.getMonth()||e.getDate()!==props.value.getDate()));
+        deletearray = daysB.filter(
+          (e) =>
+            e.getFullYear() !== props.value.getFullYear() ||
+            e.getMonth() !== props.value.getMonth() ||
+            e.getDate() !== props.value.getDate()
+        );
         setDaysB(deletearray);
       }
     } else {
@@ -101,7 +103,7 @@ export default function Customdatecelwrapper(props) {
     <div className={`rbc-day-bg special-day`}></div>
   ) : (
     <div
-      className={`rbc-day-bg ${sumB? "fakespecial-day" : ""}`}
+      className={`rbc-day-bg ${sumB ? "fakespecial-day" : ""}`}
       onClick={clickCal}
     ></div>
   );
