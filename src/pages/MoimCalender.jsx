@@ -13,7 +13,7 @@ export default function Main({nextmonth}) {
   const localizer = momentLocalizer(moment);
   //초기에 보여줄 캘린더 창
   const defaultDate = useMemo(() => nextmonth,[nextmonth]);
-  console.log(`받아오는값:${defaultDate}`)
+  // console.log(`받아오는값:${defaultDate}`)
 
   return (
       <Calendar

@@ -48,7 +48,7 @@ export const checkUser = (user) => async (dispatch) => {
         await setDoc(doc(db, "users", user.uid), user);
     }
     else {
-        console.log('가입되어 있습니다.');
+        // console.log('가입되어 있습니다.');
     }
     // 회원가입인지, 로그인인지 확인 후 로그인
     dispatch(userLogin(user));

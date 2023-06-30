@@ -54,7 +54,7 @@ export default function MyPage() {
     async function getUserData() {
         const docSnap = await getDoc(doc(db, "users", userData.uid));
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
+            // console.log("Document data:", docSnap.data());
             // 리덕스 업데이트
             dispatch(userLogin(docSnap.data()))
         } else {
@@ -68,7 +68,7 @@ export default function MyPage() {
     // firestore (실패! 이미지는 firebase에서 storage 따로 생성해 저장 필요한듯. 로컬에서는 변경됨)
     const uploadPhoto = (e) => {
         // 선택한 사진 값
-        console.log(e.target.files[0]);
+        // console.log(e.target.files[0]);
         // 선택 취소 시 오류 방지
         if (e.target.files[0] === undefined) { return -1; }
 
@@ -98,7 +98,7 @@ export default function MyPage() {
     // 닉네임 변경 - firestore
     const changeName = async () => {
         if (inputName!='') {
-            console.log(inputName);
+            // console.log(inputName);
             await updateDoc(doc(db, "users", userData.uid), {
                 nickname: inputName,
             });
@@ -110,7 +110,7 @@ export default function MyPage() {
     }
     // 생일 변경 - firestore
     const changeBirth = async () => {
-        console.log(inputBirth);
+        // console.log(inputBirth);
         await updateDoc(doc(db, "users", userData.uid), {
             birthday: inputBirth,
         });
@@ -163,7 +163,7 @@ export default function MyPage() {
         setShowBF(!showBF);
     };
 
-
+    const defaultPhoto = '/img/user_profile_photo.png';
 
     return (
         <div>
@@ -188,7 +188,7 @@ export default function MyPage() {
                                             <div className={`${main[`color-box`]} ${mypage[`prof-img-wrap`]}`}>
                                                 <img
                                                     // 서버의 user값에 업데이트 필요
-                                                    src={userData.photo} alt="프로필사진"
+                                                    src={process.env.PUBLIC_URL + (userData.photo ? userData.photo : defaultPhoto)} alt="프로필사진"
                                                     className={`${mypage[`prof-img`]}`} />
                                                 <div type="file" name="" id=""
                                                     className={`${mypage[`edit-btn-hover`]}`}

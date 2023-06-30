@@ -5,7 +5,7 @@ export default function Toolbar(props) {
     props.onNavigate(action);
   };
   const stringMonth=(date.getMonth()+1).toString();
-  console.log(stringMonth)
+  // console.log(stringMonth)
   return (
     <div className="rbc-toolbar">
       <span className="rbc-btn-group">

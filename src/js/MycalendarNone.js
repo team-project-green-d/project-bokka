@@ -74,7 +74,7 @@ export default function customdatecelwrapper(props) {
   let moinDateNum = [];
   if (moinDateArray && moinDateArray.length>0) {
     moinDateNum= moinDateArray.reduce((previous,current)=>previous||current);
-    console.log('그룹약속', moinDateArray)
+    // console.log('그룹약속', moinDateArray)
   } 
   {
     for (let i = 0; i < appointlist.length; i++) {
