@@ -55,7 +55,7 @@ const RollingLeft2 = () => {
                     <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                     <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                     <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
-                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-08.png.png`} alt="로고" /></li>
+                    <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-08.png`} alt="로고" /></li>
                     <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                     <li><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_subcolor.svg`} alt="Logo" /></li>
                 </ul>
