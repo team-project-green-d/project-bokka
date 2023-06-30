@@ -1,0 +1,244 @@
+/* 기본 설정 */
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+
+/* Home Page Container */
+.homepage__container {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+/* ToDo App Input Box */
+.todoapp__inputbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.todoapp__inputbox-inp {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #f1f3f5;
+    padding: 10px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.todoapp__inputbox-inp:focus {
+    outline: none;
+}
+
+.qqq {
+    height: 100px;
+    width: 10420px;
+}
+
+.todoapp__inputbox-add-btn {
+    border: none;
+    border-radius: 0;
+    background-color: #d0ebff;
+    color: #1c7ed6;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+}
+
+/* ToDo Item List */
+.todoapp__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todoapp__list-tit {
+    font-weight: bold;
+    margin: 0;
+}
+
+.todoapp__list-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+/* ToDo Item */
+.todoapp__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 36px;
+}
+
+.todoapp__item:last-child {
+    margin-bottom: 0;
+}
+
+.todoapp__item-checkbox {
+    margin-right: 10px;
+}
+
+.todoapp__item-edit-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #f1f3f5;
+    padding: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.todoapp__item-edit-input:focus {
+    outline: none;
+}
+
+.todoapp__item-ctx {
+    flex: 1;
+}
+
+.todoapp__item-ctx-checked {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #868e96;
+}
+
+.todoapp__item-edit-btn,
+.todoapp__item-delete-btn {
+    border: none;
+    border-radius: 0;
+    height: 36px;
+    width: 36px;
+    background-color: inherit;
+    color: $mainColor;
+
+}
+
+.todoapp__item-edit-btn:hover,
+.todoapp__item-delete-btn:hover {
+    cursor: pointer;
+    background-color: #d0ebff;
+}
+
+.todoapp__item-edit-btn {
+    margin-right: 3px;
+}
+
+
+.button {
+    box-sizing: border-box;
+    padding: 5px 7px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid $mainColor;
+    background-color: transparent;
+    color: $mainColor;
+
+    &:hover {
+        background-color: $subColor;
+        transition: all 0.5s;
+        font-weight: 900;
+    }
+}
+
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+li span {
+    margin-bottom: 5px;
+}
+
+
+
+.todo-form label {
+    color: $mainColor;
+    display: flex;
+    font-size: 13px;
+    height: 20px;
+}
+
+.todo-form input {
+    width: 100%;
+    height: 15px;
+    border: none;
+    color: $lightgray;
+    border-bottom: 1px solid $mainColor;
+    accent-color: none;
+    margin-bottom: 10px;
+}
+
+.todo-form input::placeholder{
+    color: $sublightgray;
+}
+
+.todo-form input:focus {
+    outline: none;
+}
+.todo-form>input[type="date"]::-webkit-input-placeholder {
+    color: $sublightgray;
+}
+
+
+.todo-form {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    margin-left: 10p;
+    display: grid;
+}
+
+.btn-container{
+    margin-top: 10px;
+}
+
+.add-memo-btn {
+    box-sizing: border-box;
+    padding: 5px 7px;
+    text-align: center;
+    width: 100%;
+    line-height: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid $mainColor;
+    background-color: transparent;
+    color: $mainColor;
+
+    &:hover {
+        background-color: $subColor;
+        transition: all 0.5s;
+        font-weight: 900;
+    }
+}
+
+.date-input{
+    cursor :pointer;
+}

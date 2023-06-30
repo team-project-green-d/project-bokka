@@ -1,0 +1,81 @@
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    font: inherit;
+    color: currentColor;
+    width: 0.95em;
+    height: 0.95em;
+    border: 0.1em solid transparent;
+    border-radius: 0.25em;
+    transition: 120ms transform ease-in-out;
+
+    display: grid;
+    place-content: center;
+
+    margin-top: 3px;
+
+    &::before {
+        content: "";
+        width: 0.6em;
+        height: 0.6em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 0.8em 0.8em $mainColor;
+        border-radius: 0.1em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        -webkit-transition: 120ms transform ease-in-out;
+        -moz-transition: 120ms transform ease-in-out;
+        -ms-transition: 120ms transform ease-in-out;
+        -o-transition: 120ms transform ease-in-out;
+}
+
+    &:checked::before {
+        transform: scale(1);
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &:checked~.li-title-p {
+        text-decoration: line-through;
+        // font-style: italic;
+        color: $sublightgray !important;
+    }
+}
+
+.test2 {
+    // margin: 15px 5px 5px 5px;
+}
+
+.test2-groupmem {
+    margin: 15px 5px 5px 5px;
+}
+
+.test2-groupmem > div {
+    margin-right: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.checkbox2 {
+    float: left;
+    margin-left: 20px;
+    background-color: red;
+    border: none;
+}
+
+.check-wrap {
+    display: flex;
+    justify-content: space-between;
+}

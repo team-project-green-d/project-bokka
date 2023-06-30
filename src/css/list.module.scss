@@ -1,0 +1,507 @@
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+.m-f-wrap {
+    position: relative;
+}
+
+.moim-wrap-box {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.moim-popup {
+    background-color: $subColor;
+    color: $mainColor;
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    top: 610px;
+    border-radius: 20px;
+    animation: updown 2s linear 0s infinite alternate;
+
+    &::after{
+        content: "";
+        border-top: 10px solid transparent;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 10px solid $subColor;
+        position: absolute;
+        top: -19px;
+        right: 53px;
+    }
+}
+.moim-popup>p {
+    text-align: center;
+    font-size: 14px;
+}
+.moim-popup>p:first-child {
+    margin-top: 20px;
+}
+
+.moim-popup>div:last-child {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@keyframes updown {
+	0% {transform: translateY(0%)}
+	50% {transform: translateY(10%)}
+	100% {transform: translateY(0%)}
+  }
+
+
+.moim-wrap-box>div:first-child {
+    margin-right: 10px;
+}
+.moim-wrap-box>div:last-child {
+    margin-left: 10px;
+}
+
+
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    border: 1px solid $mainColor;
+    color: $lightgray;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+.wrap1 {
+    display: flex;
+    justify-content: center;
+    color: $lightgray;
+    position: relative;
+}
+
+.wrap-groupmem {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 101;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.container-groupmem {
+    width: 470px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: $lightgray;
+    margin: 10% auto;
+    background-color: white;
+    z-index: 101;
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+}
+
+.topbtn {
+    display: flex;
+    margin: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.topbtn>div:first-child {
+    display: flex;
+}
+
+.topbtn-moim {
+    display: flex;
+    margin: 20px;
+    margin-top: 25px;
+}
+
+.topbtn3 {
+    display: flex;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+
+
+.box {
+    border: 1px solid $mainColor;
+    color: $lightgray;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 90px;
+    min-width: 458px;
+    text-align: center;
+}
+.group-wrap {
+    height: 630px;
+}
+
+.test {
+    // display: flex;
+    margin: 35px 5px 5px 5px;
+}
+
+.test2 {
+    // margin: 15px 5px 5px 5px;
+    padding: 15px 0;
+}
+
+.box2 {
+    border: 1px solid $mainColor;
+    color: $lightgray;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 50px;
+    min-width: 458px;
+    text-align: center;
+}
+
+.box22 {
+    border: 1px solid transparent;
+    color: $lightgray;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 50px;
+    min-width: 458px;
+    text-align: center;
+    position: relative;
+}
+
+.text-box{
+    margin: 15px auto;
+    position: relative;
+}
+
+.btn-parent{
+    width: 90%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    font-size: 13px;
+    box-sizing: border-box;
+    // z-index: 9;
+    // border: 1px solid red;
+    // background-color: antiquewhite;
+}
+
+.btn-parent-friend{
+    width: 70%;
+    height: 50px;
+    right: 60px;
+    top: -15px;
+    position: absolute;
+    font-size: 13px;
+    box-sizing: border-box;
+    cursor: pointer;
+    // z-index: 9;
+    // border: 1px solid red;
+    // background-color: antiquewhite;
+}
+
+.list-box-groupmem {
+    border: 1px solid transparent;
+    color: $lightgray;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 50px;
+    min-width: 380px;
+}
+
+.moim {
+    margin-right: 20px;
+    border: solid black 1px;
+    width: 500px;
+}
+
+.container {
+    margin: 20px;
+    height: 460px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container2 {
+    margin: 20px;
+    height: 460px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.list-container {
+    margin: 15px auto;
+    position: relative;
+}
+
+
+.mark-box {
+    background-color: $subColor;
+}
+
+.delete {
+    float: right;
+    margin-right: 10px;
+    border: none;
+    color: $mainColor;
+    font-size: 15px;
+    opacity: 0.9;
+    &:hover {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+.delete-groupmem {
+    float: right;
+    border: none;
+    color: $mainColor;
+    font-size: 20px;
+    opacity: 0.9;
+    &:hover {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+.delete1 {
+    float: right;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    opacity: 0.9;
+    &:hover {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+.moim-under-btn {
+    float: right;
+    margin: auto 25px;
+    margin-bottom: 30px;
+}
+
+.moim-under-btn7 {
+    margin-top: 15px;
+    height: 24px;
+}
+
+
+
+.moim-top-btn1 {
+    margin: 5px;
+    position: relative;
+}
+.moim-top-btn1 > div {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.moim-top-btn5 {
+    margin-left: 132.5px;
+    // float: right;
+}
+
+.moim-under-btn {
+    float: right;
+}
+
+.moim-under-btn>button {
+    padding: 0 20px 0 20px;
+}
+
+.chingu-top-btn {
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+}
+
+.f-list-bt-wrap {
+    margin: auto 25px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    // border: 1px solid red;
+}
+.ttt-groupmem {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 25px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.ttt-groupmem>div:last-child {
+    float: right;
+}
+
+
+.eeee {
+    margin-right: 5px;
+}
+
+
+.checkbox1 {
+    float: left;
+    margin-left: 20px;
+}
+
+.checkbox2 {
+    float: left;
+    margin-left: 20px;
+}
+
+.sb {
+    display: flex
+}
+
+.modal-close4 {
+    float: right;
+    color: $mainColor;
+    margin-top: -75px;
+    margin-right: -70px;
+    font-size: 18px;
+}
+
+
+
+
+.chat-form {
+    align-items: center;
+}
+
+.chat-div {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.chat-form-text {
+    margin-left: 98px;
+    margin-top: -20px;
+    display: flex;
+    width: 300px;
+    height: 20px;
+    justify-content: center;
+    border: 1px solid $mainColor;
+    color: $lightgray;
+    border-radius: 10px;
+
+}
+
+
+
+.wrap2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid $mainColor;
+    color: $lightgray;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.wrap3 {
+    display: flex;
+    justify-content: center;
+    width: 1040px;
+    margin: 0 auto;
+    color: $lightgray;
+}
+
+
+
+//////////////// checkbox 체크박스 css ///////////////////
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    font: inherit;
+    color: currentColor;
+    width: 0.95em;
+    height: 0.95em;
+    // border: 0.1em solid $mainColor;
+    border-radius: 0.25em;
+    transition: 120ms transform ease-in-out;
+
+    display: grid;
+    place-content: center;
+
+    margin-top: 3px;
+
+    &::before {
+        content: "";
+        width: 0.6em;
+        height: 0.6em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 0.8em 0.8em $mainColor;
+        border-radius: 0.1em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        -webkit-transition: 120ms transform ease-in-out;
+        -moz-transition: 120ms transform ease-in-out;
+        -ms-transition: 120ms transform ease-in-out;
+        -o-transition: 120ms transform ease-in-out;
+}
+
+    &:checked::before {
+        transform: scale(1);
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &:checked~.li-title-p {
+        text-decoration: line-through;
+        // font-style: italic;
+        color: $sublightgray !important;
+    }
+}
+
+
+.heart {
+    float: left;
+    margin-left: 10px;
+    border: none;
+    font-size: 15px;
+    &:hover {
+        background-color: transparent;
+    }
+}
+.color-heart {
+    fill : $mainColor;
+}
+
+
+
+.color-gray {
+    color: $sublightgray
+}
+
+.add-moim-btn {
+    display: flex;
+}
+
+///// 버튼 활성
+.on {
+    background-color: $subColor;
+}
+
+.off {
+    background-color: transparent;
+}
+
+
+.group-link {
+    color: $mainColor;
+}

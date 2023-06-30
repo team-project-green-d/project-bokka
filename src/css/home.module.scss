@@ -1,0 +1,445 @@
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+.main-color {
+    color: $mainColor;
+}
+
+.main-bgcolor {
+    background-color: #5567B1;
+}
+
+.sub-color {
+    color: $subColor;
+}
+
+.sub-bgcolor {
+    background-color: $subColor;
+}
+
+.box-border {
+    border: 1px solid $gray;
+}
+
+.home-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// --------------------- left box -----------------
+
+.left-box {
+    width: 422px;
+    height: 820px;
+    float: left;
+}
+
+.left-top {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    color: white;
+}
+
+.left-top-left {
+    width: 100px;
+    // margin-top: 4px;
+    margin-left: 25px;
+}
+
+
+.left-top-left div{
+    float: left;
+    font-size: 23px;
+    margin-right: 20px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    // border: 1px solid red;
+}
+
+.left-top-left div img{
+    width: 100%;
+}
+
+
+.left-top-right {
+    width: 100px;
+    // margin-top: 4px;
+    margin-right: 10px;
+}
+
+.left-top-right div {
+    float: left;
+    font-size: 23px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+.calender-wrap {
+    width: 90%;
+    height: 725px;
+    margin: 20px 5%;
+}
+
+
+.calendar-box{
+    width: 100%;
+    height: 355px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+// --------------------- center box -----------------
+
+.center-box {
+    width: 330px;
+    height: 820px;
+    float: left;
+}
+
+.list-wrap {
+    width: 100%;
+}
+
+
+
+.interest-box {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.interest-box li {
+    width: 163px;
+    height: 163px;
+    line-height: 163px;
+    text-align: center;
+    margin-bottom: 4px;
+    float: left;
+    box-sizing: border-box;
+    // transition: all 1s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-box li:hover {
+    background-color: $subColor;
+    transition: all 1s;
+}
+
+.interest-name{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: $mainColor;
+    position: absolute;
+}
+
+.interest-add-text{
+    color: $mainColor;
+    line-height: 150px;
+}
+
+.interest-add-plus svg{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 87px;
+    left: 70px;
+    // border: 1px solid red;
+}
+
+.interest-box>li:nth-child(1),
+.interest-box>li:nth-child(3) {
+    margin-right: 4px;
+}
+
+.interest-box>li:nth-child(1){
+    border-radius: 10px 0 0 0;
+}
+
+.interest-box>li:nth-child(2){
+    border-radius: 0 10px 0 0;
+}
+
+// .interest-box>li:nth-child(3),
+// .interest-box>li:nth-child(4){
+//     border-radius: 0;
+// }
+
+.interest-box>li:nth-child(3){
+    border-radius: 0 0 0 10px;
+}
+
+.interest-box>li:nth-child(4){
+    border-radius: 0 0 10px 0;
+}
+
+
+
+
+.interest-close{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 13px;
+    line-height: 10px;
+    color: $sublightgray;
+    opacity: 0.5;
+    z-index: 21;
+    // background-color: #5567B1;
+}
+
+.interest-symbol{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    opacity: 0.3;
+    // animation: symbolhover 1s ease-in-out;
+}
+
+@keyframes symbolhover {
+    0% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.interest-btn-parent{
+    z-index: 20;
+    // background-color: antiquewhite;
+}
+
+
+.list-view {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}
+
+.list-view:hover {
+    background-color: $subColor;
+    transition: all 0.5s;
+    background-color: $sublightgray;
+}
+
+.list-add-warp {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.list-add-warp li{
+    position: relative;
+    // border: 1px solid greenyellow;
+}
+
+.list-add-left,
+.list-add-right {
+    width: 163px;
+    height: 90px;
+    line-height: 90px;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: $mainColor;
+    border: $subColor;
+    color: $subColor;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.list-add-left {
+    margin-right: 4px;
+}
+
+.list-add-left:hover,
+.list-add-right:hover {
+    background-color: $subColor;
+    line-height: 60px;
+    transition: all 0.5s;
+    color: $mainColor;
+}
+
+.add-m-emoji,
+.add-f-emoji{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    transform: translateY(55px);
+    transition: all 1s;
+    // border: 1px solid red;
+}
+
+.add-f-emoji{
+    width: 80px;
+    left: 27%;
+}
+
+.add-f-emoji li{
+    float: left;
+    animation: symbol_move 1s ease-in-out infinite alternate;
+}
+
+
+.add-m-emoji li{
+    width: 35px;
+    height: 35px;
+    float: left;
+    animation: symbol_move 1s ease-in-out infinite alternate;
+}
+
+.add-m-emoji li:nth-child(1),
+.add-m-emoji li:nth-child(3),
+.add-f-emoji li{
+    width: 38px;
+}
+
+.add-m-emoji li:nth-child(2){
+    margin-left: -2px;
+}
+
+.add-m-emoji li img,
+.add-f-emoji li img{
+    width: 100%;
+}
+
+.list-add-left:hover .add-m-emoji,
+.list-add-right:hover .add-f-emoji{
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+
+.symbol_s img{
+    width: 100%;
+}
+
+
+@keyframes symbol_move {
+    0% {
+        transform: rotate(-10deg);
+        // transform: translateY(2px);
+    }
+
+    100% {
+        transform: rotate(10deg);
+        // transform: translateY(-2px);
+    }
+}
+
+
+.ad-slide {
+    width: 100%;
+    height: 375px;
+    line-height: 375px;
+    margin-top: -3px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+// --------------------- Ad slider -----------------
+
+
+.ad-swiper {
+    width: 100%;
+    height: 375px;
+    border-radius: 8px;
+    background-color: $mainColor;
+}
+
+.ad-swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// --------------------- right box -----------------
+
+.right-box {
+    width: 205px;
+    height: 780px;
+    float: left;
+    padding: 20px;
+    font-size: 13px;
+    overflow: auto;
+}
+
+.all-timeline li{
+    position: relative;
+}
+
+.all-timeline li,
+.all-timeline p {
+    color: $mainColor;
+    font-size: 13px;
+}
+
+.all-timeline p {
+    font-weight: 900;
+    font-size: 17px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.all-timeline li {
+    margin-bottom: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.all-timeline li:hover{
+    background-color: $subColor;
+}

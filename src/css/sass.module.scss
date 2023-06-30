@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Pretendard-Regular";
+}
+
+
+
+body{
+  width: 100%;
+  height: fit-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+// 마우스커서 변경 중
+// .custom-cursor {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 30px;
+//   height: 30px;
+//   pointer-events: none;
+//   z-index: 9999;
+//   background-image: url(../../public/img/bokka_symbol_maincolor.svg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+
+$mainColor: #5567b1;
+
+$subColor: #9ddbe8;
+
+$gray: #4a4b4d;
+$lightgray: #6b6b6b;
+
+$lightgray: #6b6b6b;
+
+$sublightgray: #d4d4d4;
+
+.main-color {
+  color: $mainColor;
+}
+
+.main-bgcolor {
+  background-color: #5567b1;
+}
+
+.sub-color {
+  color: $subColor;
+}
+
+.sub-bgcolor {
+  background-color: $subColor;
+}
+
+.box-border {
+  border: 1px solid $mainColor;
+}
+
+.color-box {
+  border: 1px solid $mainColor;
+  color: $lightgray;
+  border-radius: 10px;
+}
+
+.main-color-box {
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
+  color: white;
+  border-radius: 10px;
+}
+
+.sub-color-box{
+  border: 1px solid $subColor;
+  background-color: $subColor;
+  color: $mainColor;
+  border-radius: 10px;
+}
+
+.white-color-box {
+  border: 1px solid $mainColor;
+  background-color: white;
+  // color: $mainColor;
+  border-radius: 10px;
+}
+
+
+a{
+  color: $mainColor;
+}
+
+.button {
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  background-color: transparent;
+  color: $mainColor;
+}
+
+.button:hover {
+  background-color: $subColor;
+  transition: all 0.5s;
+  font-weight: 900;
+}
+
+.button1 {
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  background-color: white;
+  color:  gray;
+}
+
+.button1:hover {
+  background-color: $mainColor;
+  transition: all 0.5s;
+  font-weight: 900;
+  color: white;
+  border: 1px solid $mainColor;
+}
+.button2 {
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  background-color: white;
+  color: gray;
+}
+.button2:hover {
+  background-color: $subColor;
+  border: 1px solid $subColor;
+  transition: all 0.5s;
+  font-weight: 900;
+  color: $mainColor;
+}
+
+.button3 {
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  background-color: white;
+  color:  gray;
+}
+
+.button3:hover {
+  background-color: $mainColor;
+  transition: all 0.5s;
+  font-weight: 900;
+  color: white;
+  border: 1px solid $mainColor;
+}
+
+.button4 {
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: 1px solid $mainColor;
+  background-color: white;
+  color: gray;
+}
+.button4:hover {
+  background-color: $subColor;
+  border: 1px solid $subColor;
+  transition: all 0.5s;
+  font-weight: 900;
+  color: $mainColor;
+}
+
+.select-button {
+  padding: 1px 10px;
+  outline: 0 none;
+  appearance: none;
+  color: $mainColor;
+  line-height: 18px;
+}
+
+select.select-button option {
+  padding: 3px 0;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.wrap {
+  width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// ---------------- Header --------------------
+
+.header {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid $mainColor;
+}
+
+.header-wrap {
+  width: 1040px;
+  height: 80px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  width: 170px;
+  height: 30px;
+  float: left;
+  // border: 1px solid black;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.header-menu {
+  width: 400px;
+  height: 20px;
+  font-size: 16px;
+  margin-top: 40px;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  // border: 1px solid black;
+  position: relative;
+}
+
+.header-menu-li {
+  display: flex;
+  float: left;
+  cursor: pointer;
+  color: $mainColor;
+}
+
+.header-menu-li:hover {
+  font-weight: 900;
+}
+
+.header-menu-li-pop {
+  &:hover::after {
+    content: "로그인이 필요한 페이지입니다. 클릭하시면 로그인 페이지로⠀⠀이동합니다.";
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    background-color: $subColor;
+    color: $mainColor;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 0.9rem;
+    width: 180px;
+  }
+}
+
+.header-menu-li:last-child:hover {
+  font-weight: normal;
+}
+
+.header-menu-li a {
+  color: #5567b1;
+}
+
+.header-menu-li:last-child a {
+  font-size: 22px;
+  margin-top: -1px;
+}
+
+// ---------------- 알림버튼 & 토글 알림창 --------------------
+
+.togglebtn {
+  color: $mainColor;
+  font-size: 18px;
+}
+
+/* 우측상단 알림버튼 - 토글 알림창 슬라이드효과 */
+@keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+.slideIn {
+  animation: slideIn 1s ease-in-out;
+}
+
+.slideOut {
+  animation: slideOut 1s ease-in-out;
+}
+
+.toggle-box {
+  width: 210px;
+  height: 780px;
+  padding: 20px 30px;
+  padding-right: 40px;
+  top: 150px;
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  overflow: auto;
+  position: fixed;
+  animation: slideIn 1s ease-in-out;
+  z-index: 10;
+}
+
+.notice-list li {
+  width: 100%;
+}
+
+//// 스크롤바
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: $mainColor;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $sublightgray;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+/*--------footer-------*/
+.footer {
+  height: 120px;
+}
+
+
+/*------------alert 창------------*/
+/* <div role="alert"> classname=alert
+    나중에 마저 손 볼거임!! -sl
+*/
+.alert-wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.alert {
+  background-color: $mainColor;
+  color:  white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid $mainColor;
+  width: 300px;
+  height: auto;
+  margin: 20vh auto;
+  font-size: 18px;
+  display: flex;
+}
+// .alert-success {
+
+// }
+// .alert-error {
+
+// }

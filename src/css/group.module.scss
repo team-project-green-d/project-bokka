@@ -1,0 +1,272 @@
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+.main-color {
+    color: $mainColor;
+}
+
+.main-bgcolor {
+    background-color: #5567B1;
+}
+
+.sub-color {
+    color: $subColor;
+}
+
+.sub-bgcolor {
+    background-color: $subColor;
+}
+
+
+// ----------------------------------
+
+
+.group-name {
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: 900;
+}
+
+.right-box {
+    width: 596px;
+    box-sizing: border-box;
+}
+
+.list-wrap {
+    width: 330px;
+    height: 500px;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 19px;
+    padding: 20px;
+    overflow: auto;
+}
+
+
+.list-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-wrap li {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    // margin-bottom: 10px;
+    // border-bottom: 1px solid $mainColor;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.list-wrap li:hover {
+    background-color: $subColor;
+    transition: all 0.5s;
+    // font-weight: 900;
+}
+
+.friend-list {
+    margin-top: 15px;
+    position: relative;
+}
+
+.friend-list>li {
+    position: relative;
+}
+
+.friend-list>li p {
+    font-size: 15px;
+}
+
+
+.friend-list-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // background-color: antiquewhite;
+}
+
+.friend-list-box>li {
+    align-items: center;
+}
+
+.timeline {
+    width: 205px;
+    height: 460px;
+    float: left;
+    padding: 20px;
+    font-size: 13px;
+    overflow: auto;
+}
+
+
+// --------------------- Ad slider -----------------
+
+.gallery {
+    margin-top: 18px;
+    // width: 600px;
+    width: calc(100% - 2px);
+    // width: 100%;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+}
+
+.photo-gallery {
+    width: 100%;
+    height: 300px;
+    // padding: 20px;
+    border-radius: 8px;
+    background-color: $mainColor;
+}
+
+.photo-swiper-slide {
+    width: 100%;
+    // height: 100%;
+    height: 260px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid $mainColor;
+    // display: none;
+}
+
+.photo-swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-btn-left,
+.photo-btn-right {
+    color: white;
+    font-size: 13px;
+    padding: 3px 10px;
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.photo-btn-left {
+    left: 10px;
+    top: 8px;
+}
+
+.photo-btn-right {
+    right: 10px;
+    top: 8px;
+}
+
+.photo-btn:hover {
+    background-color: $lightgray;
+}
+
+.photo-navigation {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $mainColor;
+    }
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($lightgray, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    // position: relative;
+}
+
+.popup-content {
+    width: 940px;
+    height: calc(80vh - 100px);
+    overflow: auto;
+    margin: calc(10vh + 30px) auto;
+    background-color: white;
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    overflow-x: hidden;
+}
+
+.popup-close {
+    float: right;
+    color: $mainColor;
+    margin-top: -25px;
+    margin-right: -30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.popup-image {
+    width: calc(100% / 3);
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    /* Add this */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.popup-image img {
+    display: block;
+    max-width: 100%;
+    // max-height: 100%;
+    object-fit: contain;
+    width: 100%;
+    transition: all 1s;
+}
+
+.popup-image img:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    filter: brightness(0.5);
+}
+
+.new-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.new-badge2 {
+    top:10px;
+    right: 10px;
+    padding: 5px;
+    position:absolute;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}

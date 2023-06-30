@@ -1,0 +1,88 @@
+$mainColor: #5567b1;
+
+$subColor: #9ddbe8;
+
+$gray: #4a4b4d;
+
+$lightgray: #6b6b6b;
+
+$sublightgray: #d4d4d4;
+.rbc-calendar {
+  color: $lightgray;
+  border: none;
+}
+$sublightgray: #d4d4d4;
+//요일의 맨 앞(일요일) 날짜들
+.rbc-date-cell:first-child,
+.rbc-header:first-child>span {
+  color: $subColor;
+}
+//요일의 맨 뒤(토요일) 날짜들
+.rbc-date-cell:last-child,
+.rbc-header:last-child>span {
+  color: $mainColor;
+}
+//요일쪽 부분
+.rbc-header {
+  font-weight: normal;
+  font-size: 0.7rem;
+  padding:5px;
+  //여기에서 border 값은 맨 앞 값만 해당된다
+  & + & {
+    //맨 앞을 제외한 나머지 부분
+    border-left: none;
+  }
+}
+
+//요일쪽 밑부분
+.rbc-month-view {
+  border: none;
+  //border-top: 1px solid black;
+  //border-bottom: 1px solid black;
+}
+
+//숫자의 한줄씩
+.rbc-month-row {
+  & + & {
+    //border-top: 0.5px solid black;
+  }
+}
+
+//숫자의 한칸씩
+.rbc-day-bg {
+  & + & {
+    border-left: none;
+  }
+}
+.rbc-allday-cell{
+  display:none;
+}
+.rbc-date-cell>span{
+  font-size:0.7rem;
+}
+//달력 날짜부분의 전체 색 설정
+.rbc-day-bg {
+  background-color: rgba($sublightgray,0.3);
+  //z-index:5;
+}
+//약속이 잡힌 날짜의 색
+.special-day {
+  background-color: rgba($subColor,0.3);
+}
+.fakespecial-day {
+  background-color: rgba($subColor,0.1);
+}
+.onMoim{
+  background-color: rgba($mainColor,0.3);
+}
+.rbc-date-cell{
+  pointer-events: none;
+}
+
+.rbc-day-bg>div>p{
+  opacity: 0;
+  margin:0;
+}
+.rbc-day-bg div{
+  box-sizing:unset;
+}

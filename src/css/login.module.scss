@@ -1,0 +1,140 @@
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+.main-color{
+    color : $mainColor;
+}
+
+.main-bgcolor{
+    background-color: #5567B1;
+}
+
+.sub-color{
+    color : $subColor;
+}
+
+.sub-bgcolor{
+    background-color: $subColor;
+}
+
+.box-border {
+    border: 1px solid $mainColor;
+}
+
+.color-box{
+    border : 1px solid $mainColor;
+    color : $lightgray;
+    border-radius: 10px;
+}
+
+
+// -------------------------------------
+
+.main-bg{
+    position: relative;
+}
+
+.login-content{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    // margin: 0 auto;
+    color: $mainColor;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-wrap{
+    border-color: $mainColor;
+    width: 302px;
+    height: 120px;
+    margin: 60px auto;
+    position: relative;
+    // border: 1px solid black;
+}
+
+.login-label{
+    width: 80px;
+    height: 25px;
+    display: inline-block;
+}
+
+.login-wrap input{
+    width: 200px;
+    height: 10px;
+    color: $lightgray;
+    border: none;
+    border: 1px solid $mainColor;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.login-wrap-div{
+    margin-bottom: 10px;
+}
+
+
+.join-btn, .login-btn{
+    width: 150px;
+    height: 20px;
+    font-size: 16px;
+    position: absolute;
+    top: 100px;
+    background-color: white;
+    color: $mainColor;
+    border: none;
+    // border: 1px solid $mainColor;
+    cursor: pointer;
+}
+
+.login-btn{
+    left: 150px;
+    border-left: 1px solid $mainColor;
+}
+
+.join-btn:hover, .login-btn:hover{
+    font-weight: 900;
+}
+
+.google-login{
+    width: 300px;
+    height: 35px;
+    margin: -30px auto;
+    // padding: 10px;
+    // border-radius: 30px;
+    border-top: 1px solid $mainColor;
+    cursor: pointer;
+}
+
+.google-text{
+    width: 100px;
+    margin: 15px auto;
+}
+
+.google-text img{
+    width: 20px;
+    margin-top: 5px;
+}
+
+.google-text span{
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+.google-text span:hover{
+    font-weight: 900;
+}

@@ -1,0 +1,38 @@
+.main-bg-wrap{
+    width: 100%;
+    height: calc(100vh - 30px);
+    margin-top: -50px;
+    margin-bottom: -100px;
+    overflow: hidden;
+    position: relative;
+    // border: 1px solid red;
+}
+
+.symbol_s{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    opacity: 0.2;
+    // scale: 1;
+    transform: scale(1);
+    animation: symbol_move 1s ease-in-out infinite alternate;
+}
+
+.symbol_s img{
+    width: 100%;
+}
+
+.symbol_s:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@keyframes symbol_move {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}

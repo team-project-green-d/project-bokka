@@ -1,0 +1,580 @@
+/* 기본 설정 */
+$mainColor : #5567B1;
+
+$subColor : #9DDBE8;
+
+$gray : #4a4b4d;
+
+$lightgray : #6b6b6b;
+
+$sublightgray : #d4d4d4;
+
+
+$boxPadding: 20px;
+$boxSmallPadding: 10px;
+
+$bigMargin: 20px;
+$smallMargin: 15px;
+
+.li {
+    list-style: none;
+}
+
+/*   mypage 로딩 페이지 css  */
+.loading-mypage {
+    width: 300px;
+    margin: auto;
+    margin-top: 30vh;
+    color: $mainColor;
+}
+
+/* button design */
+// 전체 버튼 디자인
+.button {
+    box-sizing: border-box;
+    padding: 0px 8px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid $mainColor;
+    background-color: transparent;
+    color: $mainColor;
+
+    &:hover {
+        background-color: $subColor;
+        transition: all 0.5s;
+        // font-weight: 900;
+    }
+}
+
+.button-x-w {
+    background-color: transparent;
+    border: none;
+    color: white !important;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.button-x-b {
+    background-color: transparent;
+    border: none;
+    color: $mainColor;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.button-sq {
+    background-color: transparent;
+    border: 1px solid $mainColor;
+    padding: 3px 5px;
+    border-radius: 100%;
+    color: $mainColor;
+    cursor: pointer;
+}
+
+// 편집 (연필) 아이콘 버튼
+.edit-btn {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn-w {
+    color: white;
+    font-size: 16px;
+}
+// 프로필 사진 수정 버튼 (hover)
+.edit-btn-hover {
+    box-sizing: border-box;
+    width: 125px;
+    height: 125px;
+    padding: $boxPadding;
+    background-color: $subColor;
+    color: $mainColor;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    font-size: 15px;
+
+    opacity: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        opacity: 1;
+        transition: all 0.2s;
+    }
+}
+.edit-btn-hover > span:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+.profile-photo-btn {
+    opacity: 0;
+    width: 125px; height: 125px;
+    position: absolute;
+    left: 0; top: 0;
+    cursor: pointer;
+}
+
+// 편집 완료 (체크) 버튼
+.check-btn {
+    font-size: 17px;
+}
+
+// 회원 탈퇴 - 로그아웃 버튼
+.profile-btn {
+    display: flex;
+}
+.quit-btn-wrap {
+    width: 100%;
+}
+
+.quit-btn {
+    width: 75px;
+    margin: auto;
+    margin-top: $smallMargin;
+    background-color: transparent;
+
+    &:hover {
+        font-weight: 100;
+    }
+}
+
+// 메모 추가 버튼
+.add-btn {
+    background-color: transparent;
+    &:hover {
+        font-weight: 100;
+    }
+}
+
+// 달력 월 좌우 이동 버튼
+.left-right-btn {
+    cursor: pointer;
+}
+
+
+//////////////// checkbox 체크박스 css ///////////////////
+.check-line input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 0.95em;
+    height: 0.95em;
+    border: 0.1em solid $mainColor;
+    border-radius: 0.25em;
+    transition: 120ms transform ease-in-out;
+
+    display: grid;
+    place-content: center;
+
+    &::before {
+        content: "";
+        width: 0.6em;
+        height: 0.6em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 0.8em 0.8em $mainColor;
+        border-radius: 0.1em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+
+    &:checked::before {
+        transform: scale(1);
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    }
+    &:checked ~ .li-title-p {
+        text-decoration: line-through;
+        font-style: italic;
+        color: $sublightgray !important;
+    }
+}
+
+
+/////////////// on - off (display block, none) ///////////////
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
+}
+
+/* pc */
+.mypage {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.mypage-section{
+    margin-top: 40px;
+    // border: 1px solid red;
+}
+
+
+.mypage-section-content{
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(0, 12%);
+    // border: 1px solid red;
+}
+
+/* ----------------- left-box -------------- */
+/* profile + meetCount grid + calendar */
+.left-box {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* section1*/
+/* profile + meetCount grid */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: $bigMargin;
+}
+
+/* profile */
+.profile {
+    box-sizing: border-box;
+    width: 375px;
+    height: 230px;
+    padding: 35px;
+    margin-right: $bigMargin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.prof-img-wrap {
+    box-sizing: border-box;
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $mainColor;
+    place-content: center;
+}
+
+.prof-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.prof-text {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-line {
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: $mainColor;
+}
+
+.text-line:first-child>span {
+    font-size: 18px;
+}
+
+.text-line-title {
+    // color: $gray;
+}
+
+.name-input {
+    width: 82%;
+    border: none;
+    border-bottom: 1px solid $mainColor;
+    font-size: 1.2rem;
+    outline: none;
+    color: $mainColor;
+}
+
+.email,
+.birthday {
+    font-size: 0.85rem;
+    // color: $lightgray;
+}
+
+.birthday-input {
+    width: 70%;
+    font-size: 0.9rem;
+    color: $mainColor;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $mainColor;
+    &::-webkit-calendar-picker-indicator{
+        display: none;
+    }
+}
+
+/* friend profile */
+.friend-pf {
+    width: 375px;
+    height: 230px;
+    background-color: #ffffff;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.profile-modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.f-p-calendar {
+    margin-top: $smallMargin;
+    
+}
+
+.f-p-x-wrap {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* meet count */
+.meet-count {
+    box-sizing: border-box;
+    width: 375px;
+    height: 230px;
+    text-align: left;
+    padding: $boxSmallPadding;
+    //    padding-right: 0;
+    margin-right: $bigMargin;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.meet-list {
+    //    height: 130px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.meet-list-li {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+}
+.meet-list-li>div {
+    position: relative;
+    cursor: pointer;
+}
+.meet-list-li>div>div {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.meet-list-li:first-child .bf-icon {
+    display: block;
+}
+
+// ------------- 버튼 부모 div --------------
+// 모달창 버튼에 이 클래스를 부모태그로 감싸주세요!!!
+.btn-parent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 13px;
+    box-sizing: border-box;
+    // border: 1px solid red;
+    // background-color: antiquewhite;
+}
+
+
+
+/* section2 */
+/* calendar */
+.calendar {
+    display: flex;
+    justify-content: center;
+    margin-right: $bigMargin;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.calendar-wrap {
+    box-sizing: border-box;
+    width: 375px;
+    height: auto;
+    padding: $boxPadding;
+    padding-bottom: 0;
+}
+
+
+
+.calendar>div:first-child {
+    margin-right: $bigMargin;
+}
+
+.calendar-title-wrap {
+    text-align: center;
+    padding: $boxSmallPadding;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calendar-title-wrap>div {
+    font-size: 23px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.25s;
+    &:hover {
+        opacity: 1;
+        transition: all 0.25s;
+    }
+}
+
+.calendar-title-wrap h4 {
+    color: white;
+}
+
+.calendarA,
+.calendarB {
+    box-sizing: border-box;
+    width: 100%; height: auto;
+    padding: $boxSmallPadding;
+    margin: auto;
+    background-color: white;
+}
+
+.calendar-list {
+    padding: $boxSmallPadding;
+    // margin: 48px auto 40px auto;
+    height: 10px;
+}
+
+.calendar-box{
+    width: 100%;
+    height: 400px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    // margin: 0 auto;
+    // margin-bottom: 15px;
+    // padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    // border: 1px solid red;
+}
+
+.calendar-b-box h4{
+    color: $mainColor;
+}
+
+
+/* ----------------- right-box -------------- */
+.right-box {
+    float: right;
+}
+
+/* section3 */
+/* to-do list */
+.todolist {
+    box-sizing: border-box;
+    //    width: 250px; height: 746px;
+    width: 250px;
+    height: 770px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.todo-title {
+    height: 50px;
+    margin: auto;
+    // margin-top: 20px;
+    text-align: center;
+    padding: $boxSmallPadding;
+}
+
+.todo-title h3 {
+    margin-bottom: $smallMargin;
+}
+
+.todo-title button {
+    float: right;
+}
+
+.todo {
+    width: 100%;
+    // margin: 30px auto;
+    border: 1px solid $mainColor;
+    border-right: none;
+    border-left: none;
+    border: none;
+    // padding: 0 25px;
+    text-align: left;
+}
+.todo:first-child {
+    margin-top: 20px;
+}
+
+.li-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 0px 0;
+}
+
+.li-title>div {
+    display: flex;
+    align-items: center; 
+}
+
+.li-title-p {
+    font-size: 0.9rem;
+    color: $gray;
+}
+
+.li-text {
+    padding: 0;
+    padding-top: 5px;
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray;
+}
+
+/*-------그룹, 친구 리스트--------*/
+.my-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+.group-list {
+    margin-right: 20px;
+}
