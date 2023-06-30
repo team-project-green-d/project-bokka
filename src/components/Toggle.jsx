@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { BiBell } from "react-icons/bi";
 import mainStyle from '../css/sass.module.scss'
 import homeStyle from '../css/home.module.scss'
@@ -111,18 +111,44 @@ const ToggleBox = () => {
 
     ];
 
+    // 토글창 open 후 다른 페이지로 이동이나 클릭했을때 토글창이 close되는 함수
+    const toggleBoxRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (toggleBoxRef.current && !toggleBoxRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
+    // 토글창안의 내용을 클릭해도 안닫히게 하는 함수
+    const handleNoticeClick2 = (notice, event) => {
+        event.stopPropagation();
+        setSelectedNotice(notice);
+    };
+
+
     return (
         <div>
-            <div onClick={toggle1} className={`${user ? '' : mainStyle['header-menu-li-pop']} ${mainStyle['header-menu-li']} ${mainStyle['togglebtn']}`}>
+
+            <div ref={toggleBoxRef} onClick={toggle1} className={`${user ? '' : mainStyle['header-menu-li-pop']} ${mainStyle['header-menu-li']} ${mainStyle['togglebtn']}`}>
                 <BiBell />
             </div>
+
 
             {user && isOpen && (
                 <div className={`${mainStyle['toggle-box']} ${mainStyle['color-box']} ${isSlidingIn ? mainStyle['slideIn'] : mainStyle['slideOut']}`}>
                     <ul className={`${homeStyle['all-timeline']} ${mainStyle['notice-list']}`}>
                         <p>알림창</p>
                         {noticeList.map((notice) => (
-                            <li key={notice.id} onClick={() => handleNoticeClick(notice)}>
+                            <li key={notice.id} onClick={(event) => handleNoticeClick2(notice, event)}>
                                 {notice.modal === 'A' ? (
                                     <AcceptAppointment notice={notice} />
                                 ) : (
