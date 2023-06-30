@@ -56,129 +56,145 @@ export default function Home() {
             id: 1,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 2,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 3,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님과 새로운 친구가 되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님과 새로운 친구가 되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 4,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 친구신청을 하셨습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 친구신청을 하셨습니다",
+            birthday: '1993-03-27'
         },
         {
             id: 5,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 6,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 7,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님과 새로운 친구가 되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님과 새로운 친구가 되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 8,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 친구신청을 하셨습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 친구신청을 하셨습니다",
+            birthday: '1993-03-27'
         },
         {
             id: 9,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 10,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 11,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님과 새로운 친구가 되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님과 새로운 친구가 되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 12,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 친구신청을 하셨습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 친구신청을 하셨습니다",
+            birthday: '1993-03-27'
         },
         {
             id: 13,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
+            photo: `/img/m-left-01.png`,
             email: "eh@bokka.com",
-            text: "은희님의 약속이 변경되었습니다"
+            text: "은희님의 약속이 변경되었습니다",
+            birthday: '1986-09-21'
         },
         {
             id: 14,
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
-            text: "슬린님의 약속이 취소되었습니다"
+            photo: `/img/mmtc-03.png`,
+            text: "슬린님의 약속이 취소되었습니다",
+            birthday: '1997-04-08'
         },
         {
             id: 15,
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
-            text: "대욱님과 새로운 친구가 되었습니다"
+            photo: `/img/mmtc-08.png`,
+            text: "대욱님과 새로운 친구가 되었습니다",
+            birthday: '1999-05-26'
         },
         {
             id: 16,
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
-            text: "영환님이 친구신청을 하셨습니다"
+            photo: `/img/mmtc-07.png`,
+            text: "영환님이 친구신청을 하셨습니다",
+            birthday: '1993-03-27'
         },
     ]
 
