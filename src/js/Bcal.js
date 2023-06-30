@@ -69,7 +69,6 @@ export default function Customdatecelwrapper(props) {
     dayArrayB.push(bool);
   }
   const sumB = dayArrayB.reduce((previous, current) => previous || current);
-  //abc
   const clickCal = () => {
     if (
       window.confirm(
@@ -96,9 +95,10 @@ export default function Customdatecelwrapper(props) {
       alert("취소되었습니다.");
     }
   };
-  useEffect(() => {
+  /*useEffect(() => {
     console.log(daysB);
   }, [daysB]);
+  */
   return sumA ? (
     <div className={`rbc-day-bg special-day`}></div>
   ) : (
