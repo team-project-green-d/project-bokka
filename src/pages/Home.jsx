@@ -52,7 +52,7 @@ export default function Home() {
             id: 1,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -61,7 +61,7 @@ export default function Home() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -69,7 +69,7 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님과 새로운 친구가 되었습니다"
         },
         {
@@ -77,14 +77,14 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 친구신청을 하셨습니다"
         },
         {
             id: 5,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -93,7 +93,7 @@ export default function Home() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -101,7 +101,7 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님과 새로운 친구가 되었습니다"
         },
         {
@@ -109,14 +109,14 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 친구신청을 하셨습니다"
         },
         {
             id: 9,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -125,7 +125,7 @@ export default function Home() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -133,7 +133,7 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님과 새로운 친구가 되었습니다"
         },
         {
@@ -141,14 +141,14 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 친구신청을 하셨습니다"
         },
         {
             id: 13,
             date: "23.06.07 14:32",
             name: "장은희",
-            photo: '/img/m-left-01.png',
+            photo: `${process.env.PUBLIC_URL}/img/m-left-01.png`,
             email: "eh@bokka.com",
             text: "은희님의 약속이 변경되었습니다"
         },
@@ -157,7 +157,7 @@ export default function Home() {
             date: "23.06.06 17:12",
             name: "전하슬린",
             email: "sl@bokka.com",
-            photo: '/img/mmtc-03.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-03.png`,
             text: "슬린님의 약속이 취소되었습니다"
         },
         {
@@ -165,7 +165,7 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "허대욱",
             email: "du@bokka.com",
-            photo: '/img/mmtc-08.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-08.png`,
             text: "대욱님과 새로운 친구가 되었습니다"
         },
         {
@@ -173,7 +173,7 @@ export default function Home() {
             date: "23.06.05 21:35",
             name: "김영환",
             email: "yh@bokka.com",
-            photo: '/img/mmtc-07.png',
+            photo: `${process.env.PUBLIC_URL}/img/mmtc-07.png`,
             text: "영환님이 친구신청을 하셨습니다"
         },
     ]
@@ -217,11 +217,11 @@ export default function Home() {
                     <div className={homeStyle['left-top']}>
                         <div className={homeStyle['left-top-left']}>
                             <div className={homeStyle['calender-A']} onClick={handleCalenderAClick}>
-                                <img src="/img/calenderA_w.svg" alt="icon"
+                                <img src={`${process.env.PUBLIC_URL}/img/calenderA_w.svg`} alt="icon"
                                     onClick={() => dispatch(setTrue())} />
                             </div>
                             <div className={homeStyle['calender-B']} onClick={handleCalenderBClick}>
-                                <img src="/img/calenderB_w.svg" alt="icon"
+                                <img src={`${process.env.PUBLIC_URL}/img/calenderB_w.svg`} alt="icon"
                                     onClick={() => dispatch(setFalse())} />
                             </div>
                         </div>
@@ -277,7 +277,7 @@ export default function Home() {
                                     <li className={mainStyle['color-box']} key={index}>
                                         <div></div>
                                         <div className={homeStyle['interest-symbol']}>
-                                            <img src="/img/bokka_symbol_w.png" alt="symbol" />
+                                            <img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_w.png`} alt="symbol" />
                                         </div>
                                         <Link to={`/group/${markData[index]}`}>
                                             <div className={homeStyle['interest-name']}>{i}</div>
@@ -294,7 +294,7 @@ export default function Home() {
                                         key={`empty-${index}`}
                                         className={`${homeStyle['interest-add']} ${mainStyle['color-box']}`}
                                     >
-                                        <div className={homeStyle['interest-symbol']}><img src="/img/bokka_symbol_w.png" alt="symbol" /></div>
+                                        <div className={homeStyle['interest-symbol']}><img src={`${process.env.PUBLIC_URL}/img/bokka_symbol_w.png`} alt="symbol" /></div>
                                         {/* <div className={`${homeStyle['interest-name']} ${modal['add-int-btn']}`}><AddFriend/>관심추가<FiPlus/></div> */}
                                         <Link to='/list'><div className={`${homeStyle['interest-add-text']} ${modal['add-int-btn']}`}>관심모임 추가<div className={`${homeStyle['interest-add-plus']}`}><FiPlus /></div></div></Link>
                                     </li>
@@ -313,10 +313,10 @@ export default function Home() {
                                 <div className={`${modal['add-f-btn']}`}>
                                     <div>
                                         <ul className={`${homeStyle['add-m-emoji']}`}>
-                                            <li><img src="/img/mmtc-15.png" alt="로고" /></li>
-                                            <li><img src="/img/mmtc-11.png" alt="로고" /></li>
-                                            <li><img src="/img/mmtc-10.png" alt="로고" /></li>
-                                            <li><img src="/img/mmtc-23.png" alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-15.png`} alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-11.png`} alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-10.png`} alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-23.png`} alt="로고" /></li>
                                         </ul>
                                         <div className={`${modal['btn-parent']}`}>
                                             <AddGroupSample />
@@ -329,8 +329,8 @@ export default function Home() {
                                 <div className={`${modal['add-f-btn']}`}>
                                     <div>
                                         <ul className={`${homeStyle['add-f-emoji']}`}>
-                                            <li><img src="/img/mmtc-14.png" alt="로고" /></li>
-                                            <li><img src="/img/mmtc-22.png" alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-14.png`} alt="로고" /></li>
+                                            <li><img src={`${process.env.PUBLIC_URL}/img/mmtc-22.png`} alt="로고" /></li>
                                         </ul>
                                         <div className={`${modal['btn-parent']}`}>
                                             <AddFriend />

@@ -140,7 +140,7 @@ export default function Login() {
                     uid: user.uid,
                     email: user.email,
                     nickname: 'user1',
-                    photo: '/img/user_profile_photo.png',
+                    photo: `${process.env.PUBLIC_URL}/img/user_profile_photo.png`,
                     birthday: '',
                     likeGroup: [], // 관심 모임
                     friendList: [], // 친구 uid 컬렉션
@@ -265,7 +265,7 @@ export default function Login() {
                         onClick={onGoogleLogin}
                     >
                         <div className={loginStyle['google-text']}>
-                            <img src="/img/google_logo.png" alt="" />
+                            <img src={process.env.PUBLIC_URL + '/img/google_logo.png'} alt="이미지" />
                             <span>구글로그인</span>
                         </div>
                     </div>

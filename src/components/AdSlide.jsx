@@ -33,9 +33,9 @@ export default function AdSlide() {
                 // className="mySwiper"
                 className={`${homeStyle['ad-swiper']} ${'mySwiper'}`}
             >
-                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src="/img/ad-banner-01.jpg" alt="ad" /></SwiperSlide>
-                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src="/img/ad-banner-02.jpg" alt="ad" /></SwiperSlide>
-                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src="/img/ad-banner-03.png" alt="ad" /></SwiperSlide>
+                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src={`${process.env.PUBLIC_URL}/img/ad-banner-01.jpg`} alt="ad" /></SwiperSlide>
+                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src={`${process.env.PUBLIC_URL}/img/ad-banner-02.jpg`} alt="ad" /></SwiperSlide>
+                <SwiperSlide className={homeStyle['ad-swiper-slide']}><img src={`${process.env.PUBLIC_URL}/img/ad-banner-03.png`} alt="ad" /></SwiperSlide>
 
             </Swiper>
         </div>

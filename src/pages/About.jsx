@@ -271,7 +271,7 @@ export default function About() {
                 {/* ----------------- section 01 / 설명 -------------------*/}
                 <section className={aboutStyle['section-wrap']}>
                     <div className={aboutStyle['about-top-logo']}>
-                        <img src="/img/bokka logo_kor_w.png" alt="사진" />
+                        <img src={process.env.PUBLIC_URL + '/img/bokka logo_kor_w.png'} alt="사진" />
                     </div>
                     <span>about</span>
                     <p>BOKKA?!</p>
@@ -302,59 +302,59 @@ export default function About() {
 
                         <AosFadeUp01>
                             <div className={`${aboutStyle['chatbox']} ${aboutStyle['chatbox-left']}`}>
-                                <img src="/img/chatbox-b-01.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/chatbox-b-01.png'} alt="이미지" />
                                 <div>
                                     언니, 잘지냈어요?<br />
                                     프사 바꼈네요, 넘 예뻐요!! 꺄
                                 </div>
                             </div>
                             <div className={`${aboutStyle['chatfaceA']} ${aboutStyle['chatface-left']}`}>
-                                <img src="/img/m-left-01.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/m-left-01.png'} alt="이미지" />
                             </div>
                         </AosFadeUp01>
 
                         <AosFadeUp02>
                             <div className={`${aboutStyle['chatbox']} ${aboutStyle['chatbox-right']}`}>
-                                <img src="/img/chatbox-b-04.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/chatbox-b-04.png'} alt="이미지" />
                                 <div className={`${aboutStyle['chatbox-right-text']}`}>
                                     꺄 고마워!!!<br />
                                     조만간 맛있는거 먹으러가자!
                                 </div>
                             </div>
                             <div className={`${aboutStyle['chatface']} ${aboutStyle['chatface-right']}`}>
-                                <img src="/img/m-right-01.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/m-right-01.png'} alt="이미지" />
                             </div>
                         </AosFadeUp02>
 
                         <AosFadeUp02>
                             <div className={`${aboutStyle['chatbox']} ${aboutStyle['chatbox-left']}`}>
-                                <img src="/img/chatbox-b-01.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/chatbox-b-01.png'} alt="이미지" />
                                 <div>
                                     가요가요!!!<br />
                                     언니 시간되는 날 알려주세요!
                                 </div>
                             </div>
                             <div className={`${aboutStyle['chatface']} ${aboutStyle['chatface-left']}`}>
-                                <img src="/img/m-left-02.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/m-left-02.png'} alt="이미지" />
                             </div>
                         </AosFadeUp02>
 
                         <AosFadeUp02>
                             <div className={`${aboutStyle['chatbox']} ${aboutStyle['chatbox-right']}`}>
-                                <img src="/img/chatbox-b-04.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/chatbox-b-04.png'} alt="이미지" />
                                 <div className={`${aboutStyle['chatbox-right-text']}`}>
                                     응응!! 이번달은 안될꺼같구<br />
                                     다음 달 스케줄 나오면 연락할께!
                                 </div>
                             </div>
                             <div className={`${aboutStyle['chatface']} ${aboutStyle['chatface-right']}`}>
-                                <img src="/img/m-right-02.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/m-right-02.png'} alt="이미지" />
                             </div>
                         </AosFadeUp02>
 
                         <AosFadeUp02>
                             <div className={`${aboutStyle['chatbox']} ${aboutStyle['chatbox-left']}`}>
-                                <img src="/img/chatbox-b-06.png" alt="사진" />
+                                <img src={process.env.PUBLIC_URL + '/img/chatbox-b-06.png'} alt="이미지" />
                                 <div className={aboutStyle['chatbox-last-left']}>
                                     조아효!! 연락주세요 언닝♡
                                 </div>
@@ -370,7 +370,7 @@ export default function About() {
                                     {/* <span>{blogTitle}</span> */}
                                 </div>
                                 <div className={aboutStyle['sendbox-right']}>
-                                    <img src="/img/send-icon.png" alt="사진" />
+                                    <img src={process.env.PUBLIC_URL + '/img/send-icon.png'} alt="이미지" />
                                 </div>
                             </div>
                         </AosFadeUp01>
@@ -381,7 +381,7 @@ export default function About() {
                 <div className={`${aboutStyle['main-bg-wrap']}`}>
                     {symbolStyles.map((style, index) => (
                         <div key={index} style={style} className={`${aboutStyle['symbol_s']}`}>
-                            <img src="/img/bokka_logo_eng_line_w.png" alt="로고" />
+                            <img src={process.env.PUBLIC_URL + '/img/bokka_logo_eng_line_w.png'} alt="이미지" />
                         </div>
                     ))}
                 </div>
@@ -403,7 +403,7 @@ export default function About() {
                                     <b>2가지 스타일로 관리</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-23.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-23.png'} alt="이미지" />
                                 </div>
                             </li>
 
@@ -414,7 +414,7 @@ export default function About() {
                                     <b>A, B 캘린더 중 선택</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-09.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-09.png'} alt="이미지" />
                                 </div>
                             </li>
 
@@ -425,7 +425,7 @@ export default function About() {
                                     확인 가능<br />
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-19.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-19.png'} alt="이미지" />
                                 </div>
                             </li>
 
@@ -436,7 +436,7 @@ export default function About() {
                                     <b>한 눈에 확인</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-10.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-10.png'} alt="이미지" />
                                 </div>
                             </li>
 
@@ -447,7 +447,7 @@ export default function About() {
                                         약속을 피하고 사람에게도,<br />
                                         꼭 필요한!</b>
                                     <div className={aboutStyle['skill-logo']}>
-                                        <img src="/img/bokka_logo_eng_line.png" alt="사진" />
+                                        <img src={process.env.PUBLIC_URL + '/img/bokka_logo_eng_line.png'} alt="이미지" />
                                     </div>
                                 </div>
                             </li>
@@ -459,7 +459,7 @@ export default function About() {
                                     <b>캘린더 막아두기</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-07.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-07.png'} alt="이미지" />
                                 </div>
                             </li>
 
@@ -470,7 +470,7 @@ export default function About() {
                                     <b> 확인 후 약속신청</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-15.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-15.png'} alt="이미지" />
                                 </div>
                             </li>
                             <li>
@@ -480,7 +480,7 @@ export default function About() {
                                     확인 후 모임신청 가능
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-11.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-11.png'} alt="이미지" />
                                 </div>
                             </li>
                             <li>
@@ -490,7 +490,7 @@ export default function About() {
                                     <b>타임라인 확인 가능</b>
                                 </div>
                                 <div className={aboutStyle['skill-memoji']}>
-                                    <img src="/img/mmtc-22.png" alt="memoji" />
+                                    <img src={process.env.PUBLIC_URL + '/img/mmtc-22.png'} alt="이미지" />
                                 </div>
                             </li>
                         </ul>
@@ -501,7 +501,7 @@ export default function About() {
                 <div className={`${aboutStyle['main-bg-wrap']}`}>
                     {symbolStyles.map((style, index) => (
                         <div key={index} style={style} className={`${aboutStyle['symbol_s']}`}>
-                            <img src="/img/bokka_logo_eng_line_w.png" alt="로고" />
+                            <img src={process.env.PUBLIC_URL + '/img/bokka_logo_eng_line_w.png'} alt="이미지" />
                         </div>
                     ))}
                 </div>
