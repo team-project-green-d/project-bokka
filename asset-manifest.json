@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/project-bokka/static/css/main.d39a6c64.css",
-    "main.js": "/project-bokka/static/js/main.a7d7e271.js",
+    "main.css": "/project-bokka/static/css/main.29390e2b.css",
+    "main.js": "/project-bokka/static/js/main.6ca098b7.js",
     "static/js/787.bf0eb120.chunk.js": "/project-bokka/static/js/787.bf0eb120.chunk.js",
     "index.html": "/project-bokka/index.html",
-    "main.d39a6c64.css.map": "/project-bokka/static/css/main.d39a6c64.css.map",
-    "main.a7d7e271.js.map": "/project-bokka/static/js/main.a7d7e271.js.map",
+    "main.29390e2b.css.map": "/project-bokka/static/css/main.29390e2b.css.map",
+    "main.6ca098b7.js.map": "/project-bokka/static/js/main.6ca098b7.js.map",
     "787.bf0eb120.chunk.js.map": "/project-bokka/static/js/787.bf0eb120.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d39a6c64.css",
-    "static/js/main.a7d7e271.js"
+    "static/css/main.29390e2b.css",
+    "static/js/main.6ca098b7.js"
   ]
 }
