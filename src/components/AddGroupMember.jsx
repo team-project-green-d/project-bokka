@@ -4,12 +4,7 @@ import mainStyle from "../css/sass.module.scss";
 import list from "../css/list.module.scss";
 import mdl from '../css/modal.module.scss';
 import { useDispatch, useSelector } from "react-redux";
-import AddFriend from "../components/AddFriend";
-import AddGroupSample from "../components/AddGroupSample";
-import { deletefriendList, getfriendList, noSessionfriendList } from "../slice/friendSlice";
 import { LuX } from "react-icons/lu";
-import { updateBtn } from "../slice/listArrayslice";
-import friendlist from '../css/friendlist.module.scss'
 import { db } from "../database/firebase";
 import { collection, doc, getDocs, or, query, updateDoc, where } from "firebase/firestore";
 import { getgroupList } from "../slice/groupSlice";
@@ -18,7 +13,7 @@ import FriendCheckbox from "./FriendCheckbox";
 export default function AddGroupMember() {
     const navigate = useNavigate("");
 
-    const {gName} = useParams();
+    const { gName } = useParams();
 
     // 리덕스 저장 정보
     const user = useSelector((state) => state.user.user);
@@ -33,23 +28,23 @@ export default function AddGroupMember() {
     const groupData = JSON.parse(sessionStorage.getItem('group'));
     const listArrayData = JSON.parse(sessionStorage.getItem('listArray'));
 
-    useEffect(()=>{
-        if(!groupData) {
+    useEffect(() => {
+        if (!groupData) {
             navigate('/')
         }
-    },[])
+    }, [])
 
     const selectG = groupData && groupData.filter((g) => g.gName === gName)[0];
     // console.log(selectG);
-    const mem = selectG && selectG.member.map(it=>it.fid);
+    const mem = selectG && selectG.member.map(it => it.fid);
     // console.log(mem);
 
     // 그룹 만들 선택 친구 배열 (값 props로 넘겨주기)
     const [selectFriends, setSelectFriends] = useState([]);
-    
+
     // 모달 on off
     const [openModal, setOpenModal] = useState(false);
-    
+
     // 이름순 정렬
     const [nameBtn, setNameBtn] = useState(true);
     // const [mem, setMem] = useState(selectG ? selectG.member.map(it=>it.fid) : []);
@@ -60,9 +55,9 @@ export default function AddGroupMember() {
     // console.log(mem, fid)
     // console.log(friendData.filter((f) => !mem.includes(f.fid) ));
 
-    useEffect(()=>{
+    useEffect(() => {
         setMemArray(friendData && friendData.filter((f) => !mem.includes(f.fid)));
-    },[group])
+    }, [group])
 
     // 이름순 정렬 관리 함수
     const handleNameSort = () => {
@@ -193,24 +188,24 @@ export default function AddGroupMember() {
                             </div>
                             {/**친구별 */}
                             <div className={list["container2"]}>
-                                {memArray &&
+                                {memArray[0] ?
                                     (
                                         memArray
-                                        .filter((friend) => (displayType === "" || (displayType === "A" && friend.showCalA) || (displayType === "B" && !friend.showCalA)))
-                                        .map((friend) => (
-                                            <div
-                                                className={list["list-box-groupmem"]}
-                                                key={friend.fid}
-                                                style={{
-                                                    // ShowCalA 를 이용하여 A캘린더에 등록된사람은 #5567b1
-                                                    // B캘린더에 등록된 사람은 #9ddce8 으로 뜨게 하기
-                                                    backgroundColor: friend.showCalA ? "#5567b1" : "#9ddce8",
-                                                    color: "white",
-//                                                    fontStyle: friend.fState ? "normal" : "italic"
-                                                }}
-                                            >
+                                            .filter((friend) => (displayType === "" || (displayType === "A" && friend.showCalA) || (displayType === "B" && !friend.showCalA)))
+                                            .map((friend) => (
+                                                <div
+                                                    className={list["list-box-groupmem"]}
+                                                    key={friend.fid}
+                                                    style={{
+                                                        // ShowCalA 를 이용하여 A캘린더에 등록된사람은 #5567b1
+                                                        // B캘린더에 등록된 사람은 #9ddce8 으로 뜨게 하기
+                                                        backgroundColor: friend.showCalA ? "#5567b1" : "#9ddce8",
+                                                        color: "white",
+                                                        //                                                    fontStyle: friend.fState ? "normal" : "italic"
+                                                    }}
+                                                >
                                                     <div className={list['list-container']}>
-                                                {/* <div className={friendlist["test2-groupmem"]}>
+                                                        {/* <div className={friendlist["test2-groupmem"]}>
                                                     <input
                                                         type="checkbox"
                                                         className={`${friendlist["checkbox2"]}`}
@@ -222,10 +217,18 @@ export default function AddGroupMember() {
                                                         {friend.fName}
                                                     </div>
                                                 </div> */}
-                                                <FriendCheckbox f={friend} checkFriends={checkFriends} selectFriends={selectFriends}/>
-                                </div>
-                                            </div>)
-                                        ))}
+                                                        <FriendCheckbox f={friend} checkFriends={checkFriends} selectFriends={selectFriends} />
+                                                    </div>
+                                                </div>)
+                                            )) :
+                                    <div
+                                        className={`${list["list-box-groupmem"]}`}
+                                    >
+                                        <div className={list['list-container']}>
+                                            모든 친구를 초대했습니다.
+                                        </div>
+                                    </div>
+                                }
                             </div>
                             {/** 친구 하단 버튼 */}
                             <div className={list["ttt-groupmem"]}>
