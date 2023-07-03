@@ -98,8 +98,8 @@ $sublightgray: #d4d4d4;
     font-size: 15px;
     text-align: center;
     color: $mainColor;
-    margin-top: -50px;
-    margin-bottom: -30px;
+    // margin-top: -50px;
+    // margin-bottom: -30px;
     // background-color: antiquewhite;
 }
 
@@ -155,7 +155,7 @@ $sublightgray: #d4d4d4;
 /* 모달창 크기 */
 .modal-container {
     width: 100%;
-    // padding: 20px 40px;
+    // padding: 20px 40px;odal-form-group
     // background-color: antiquewhite;
 }
 
@@ -183,9 +183,7 @@ $sublightgray: #d4d4d4;
 }
 
 .modal-form-group {
-    height: 230px;
-    margin: 0 auto;
-    line-height: 40px;
+    height: 240px;
 }
 
 .modal-form label {
@@ -207,10 +205,12 @@ $sublightgray: #d4d4d4;
 
 .make-group {
     width: 100%;
-    // margin-left: -20px;
-    // position: absolute;
-    // bottom: 0;
-    // margin-bottom: 20px;
+}
+
+
+.make-group>.modal-text-group{
+    height: 30px;
+    margin-bottom: 20px;
 }
 
 .make-group>p {
@@ -240,13 +240,6 @@ $sublightgray: #d4d4d4;
     bottom: 0;
 }
 
-
-// .modal-quest {
-//     width: 100%;
-//     margin: 20px 0;
-//     font-size: 15px;
-//     color: $mainColor;
-// }
 
 .modal-quest2 {
     width: 100%;

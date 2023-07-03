@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
 import mainStyle from "../css/sass.module.scss";
 import list from "../css/list.module.scss";
 import mdl from '../css/modal.module.scss';
-import { useDispatch, useSelector } from "react-redux";
+import homeStyle from '../css/home.module.scss'
+import friendlist from '../css/friendlist.module.scss'
+
 import AddFriend from "../components/AddFriend";
 import AddGroupSample from "../components/AddGroupSample";
 import FriendProfileModal from '../components/FriendProfileModal';
 import { deletefriendList, getfriendList, noSessionfriendList } from "../slice/friendSlice";
-import { LuX } from "react-icons/lu";
 import { updateBtn } from "../slice/listArrayslice";
-import friendlist from '../css/friendlist.module.scss'
+
+import { LuX } from "react-icons/lu";
 import FriendCheckbox from "./FriendCheckbox";
 
 // 내용추가
