@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import CalenderModal from "../components/CalenderModal";
 import SeeMoinModal from "../components/SeeMoinModal";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { sessionarray } from "../pages/Calender";
 import NoneScheduleModal from "../components/NoneScheduleModal";
@@ -13,6 +13,8 @@ export default function Customdatecelwrapper(props) {
   // console.log(`커스텀값 : ${nowdate}`)
   const seeAcal = useSelector((state) => state.user.seeAcal);
   // console.log(seeAcal)
+  const bDateData = JSON.parse(sessionStorage.getItem("bDate"));
+  const dispatch = useDispatch();
   const daysA = [
     // new Date("2023-07-25"),
     // new Date("2023-06-25"),
@@ -25,34 +27,8 @@ export default function Customdatecelwrapper(props) {
     // new Date("2023-08-05"),
   ];
   //B캘린더는 A캘린더보다 색칠되는 값이 많아야 하므로 더미데이터를 추가해놓음
-  const daysB = daysA.concat([
-    new Date("2023-06-20"),
-    new Date("2023-05-28"),
-    new Date("2023-06-04"),
-    new Date("2023-06-16"),
-    new Date("2023-05-29"),
-    new Date("2023-06-05"),
-    new Date("2023-06-14"),
-    new Date("2023-05-30"),
-    new Date("2023-06-07"),
-    new Date("2023-06-13"),
-    new Date("2023-06-22"),
-    new Date("2023-05-31"),
-    new Date("2023-06-06"),
-    new Date("2023-06-20"),
-    new Date("2023-06-02"),
-    new Date("2023-06-12"),
-    new Date("2023-06-10"),
-    new Date("2023-06-24"),
-    new Date("2023-06-28"),
-    new Date("2023-06-21"),
-    new Date("2023-06-27"),
-    new Date("2023-06-11"),
-    new Date("2023-06-26"),
-    new Date("2023-06-29"),
-    new Date("2023-06-19"),
-    new Date("2023-06-23"),
-  ]);
+  const getbday = bDateData && bDateData.map((data) => new Date(data));
+  const daysB = daysA.concat(getbday);
   //Home에서 dispatch로 seeAcal(bool값)을 변경해주고 true이면 daysA 배열로, false면 daysB 배열로 변경되도록 설정함
   const dayconcat = seeAcal ? daysA : daysB;
   //달력 중 해달 날짜값이 있다면 true, 없다면 false로 만들 배열
