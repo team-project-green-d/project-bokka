@@ -6,9 +6,8 @@ import list from "../css/list.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 
 import { deletegroupList, getgroupList } from '../slice/groupSlice';
-import { BiHeart, BiSolidHeart } from 'react-icons/bi'
 import { LuX } from "react-icons/lu";
-import { adduserMark, deleteuserMark, updateMark } from "../slice/markSlice";
+import { updateMark } from "../slice/markSlice";
 import { FaHeart } from 'react-icons/fa'
 import { FiHeart } from 'react-icons/fi'
 import { updateBtn } from "../slice/listArrayslice";

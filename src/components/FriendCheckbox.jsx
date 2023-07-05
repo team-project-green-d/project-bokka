@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import friendlist from "../css/friendlist.module.scss";
 import list from '../css/list.module.scss'
 import mainStyle from '../css/sass.module.scss'

@@ -13,6 +13,7 @@ import { getappointmentList } from '../slice/appointmentSlice';
 import MainBg from '../components/MainBg';
 import { updateMark } from '../slice/markSlice';
 import { updateBtn } from '../slice/listArrayslice';
+import { bDateUpdate } from '../slice/calendarSlice';
 
 export default function Login() {
 
@@ -131,6 +132,37 @@ export default function Login() {
                     friendDup: true,
                     friendNup: true,
                 }));
+
+                // 유저 B 캘린더 더미 값
+                dispatch(bDateUpdate([
+                    new Date("2023-06-20"),
+                    new Date("2023-05-28"),
+                    new Date("2023-06-04"),
+                    new Date("2023-06-16"),
+                    new Date("2023-05-29"),
+                    new Date("2023-06-05"),
+                    new Date("2023-06-14"),
+                    new Date("2023-05-30"),
+                    new Date("2023-06-07"),
+                    new Date("2023-06-13"),
+                    new Date("2023-06-22"),
+                    new Date("2023-05-31"),
+                    new Date("2023-06-06"),
+                    new Date("2023-06-20"),
+                    new Date("2023-06-02"),
+                    new Date("2023-06-12"),
+                    new Date("2023-06-10"),
+                    new Date("2023-06-24"),
+                    new Date("2023-06-28"),
+                    new Date("2023-06-21"),
+                    new Date("2023-06-27"),
+                    new Date("2023-06-11"),
+                    new Date("2023-06-26"),
+                    new Date("2023-06-29"),
+                    new Date("2023-06-19"),
+                    new Date("2023-06-23"),
+                ]));
+
                 navigate('/home');
             }).catch((error) => {
                 // const errorCode = error.code;
@@ -179,6 +211,37 @@ export default function Login() {
                     friendDup: true,
                     friendNup: true,
                 }));
+
+                // 유저 B 캘린더 더미 값
+                dispatch(bDateUpdate([
+                    new Date("2023-06-20"),
+                    new Date("2023-05-28"),
+                    new Date("2023-06-04"),
+                    new Date("2023-06-16"),
+                    new Date("2023-05-29"),
+                    new Date("2023-06-05"),
+                    new Date("2023-06-14"),
+                    new Date("2023-05-30"),
+                    new Date("2023-06-07"),
+                    new Date("2023-06-13"),
+                    new Date("2023-06-22"),
+                    new Date("2023-05-31"),
+                    new Date("2023-06-06"),
+                    new Date("2023-06-20"),
+                    new Date("2023-06-02"),
+                    new Date("2023-06-12"),
+                    new Date("2023-06-10"),
+                    new Date("2023-06-24"),
+                    new Date("2023-06-28"),
+                    new Date("2023-06-21"),
+                    new Date("2023-06-27"),
+                    new Date("2023-06-11"),
+                    new Date("2023-06-26"),
+                    new Date("2023-06-29"),
+                    new Date("2023-06-19"),
+                    new Date("2023-06-23"),
+                ]));
+
                 navigate('/home');
             })
             .catch((error) => {
@@ -231,12 +294,42 @@ export default function Login() {
                     friendDup: true,
                     friendNup: true,
                 }));
+
+                // 유저 B 캘린더 더미 값
+                dispatch(bDateUpdate([
+                    new Date("2023-06-20"),
+                    new Date("2023-05-28"),
+                    new Date("2023-06-04"),
+                    new Date("2023-06-16"),
+                    new Date("2023-05-29"),
+                    new Date("2023-06-05"),
+                    new Date("2023-06-14"),
+                    new Date("2023-05-30"),
+                    new Date("2023-06-07"),
+                    new Date("2023-06-13"),
+                    new Date("2023-06-22"),
+                    new Date("2023-05-31"),
+                    new Date("2023-06-06"),
+                    new Date("2023-06-20"),
+                    new Date("2023-06-02"),
+                    new Date("2023-06-12"),
+                    new Date("2023-06-10"),
+                    new Date("2023-06-24"),
+                    new Date("2023-06-28"),
+                    new Date("2023-06-21"),
+                    new Date("2023-06-27"),
+                    new Date("2023-06-11"),
+                    new Date("2023-06-26"),
+                    new Date("2023-06-29"),
+                    new Date("2023-06-19"),
+                    new Date("2023-06-23"),
+                ]));
+
                 navigate('/home');
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log('로그인 실패')
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
                 alert('아이디나 비밀번호가 잘못되었습니다!');
             });
     }

@@ -28,6 +28,7 @@ export const userSlice = createSlice({
             sessionStorage.removeItem('appointment');
             sessionStorage.removeItem('userMark');
             sessionStorage.removeItem('listArray');
+            sessionStorage.removeItem('bDate');
         },
         //true이면 A캘린더가 볼 수 있도록 bool 값을 true로
         setTrue:(state)=>{

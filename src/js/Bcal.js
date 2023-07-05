@@ -1,11 +1,16 @@
 import CalenderModal from "../components/CalenderModal";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import ddd from "../css/ddd.module.scss";
+import { bDateUpdate } from "../slice/calendarSlice";
 
 export default function Customdatecelwrapper(props) {
 
   const groupData = JSON.parse(sessionStorage.getItem("group"));
+  const bDateData = JSON.parse(sessionStorage.getItem("bDate"));
+  const bDate = useSelector(state=>state.bDate);
+  const dispatch = useDispatch();
+  // 세션 스토로지 값에는 해외 기준 날짜로 표기됨 (작동에는 문제 없음)
 
   let dayconcat = [];
   let finalget = [];
@@ -16,52 +21,14 @@ export default function Customdatecelwrapper(props) {
   const ffnalget = finalget.map((date) => new Date(date.time));
   // console.log(ffnalget)
   const daysA = dayconcat.concat(ffnalget);
-  // console.log(daysA);
-
-  // const daysA = [
-  //   new Date("2023-07-25"),
-  //   new Date("2023-06-25"),
-  //   new Date("2023-06-17"),
-  //   new Date("2023-06-01"),
-  //   new Date("2023-07-01"),
-  //   new Date("2023-05-21"),
-  //   new Date("2023-07-05"),
-  //   new Date("2023-06-08"),
-  //   new Date("2023-08-05"),
-  // ];
-
-  let [daysB, setDaysB] = useState([
-    new Date("2023-06-20"),
-    new Date("2023-05-28"),
-    new Date("2023-06-04"),
-    new Date("2023-06-16"),
-    new Date("2023-05-29"),
-    new Date("2023-06-05"),
-    new Date("2023-06-14"),
-    new Date("2023-05-30"),
-    new Date("2023-06-07"),
-    new Date("2023-06-13"),
-    new Date("2023-06-22"),
-    new Date("2023-05-31"),
-    new Date("2023-06-06"),
-    new Date("2023-06-20"),
-    new Date("2023-06-02"),
-    new Date("2023-06-12"),
-    new Date("2023-06-10"),
-    new Date("2023-06-24"),
-    new Date("2023-06-28"),
-    new Date("2023-06-21"),
-    new Date("2023-06-27"),
-    new Date("2023-06-11"),
-    new Date("2023-06-26"),
-    new Date("2023-06-29"),
-    new Date("2023-06-19"),
-    new Date("2023-06-23"),
-  ]);
+  
+  const getbday = bDateData && bDateData.map((data) => new Date(data));
+  let [daysB, setDaysB] = useState(getbday);
+  // console.log(daysB)
 
   const [isSpecialDay, setIsSpecialDay] = useState(false);
 
-  const days = daysA.concat(daysB);
+  // const days = daysA.concat(daysB);
 
   const dayArrayA = [];
 
@@ -84,13 +51,23 @@ export default function Customdatecelwrapper(props) {
     sumA = dayArrayA.reduce((previous, current) => previous || current);
   }
   const dayArrayB = [];
+  // for (let i = 0; i < daysB.length; i++) {
+  //   let bool =
+  //     daysB[i].getDate() === props.value.getDate() &&
+  //     daysB[i].getMonth() === props.value.getMonth() &&
+  //     daysB[i].getFullYear() === props.value.getFullYear();
+  //   dayArrayB.push(bool);
+  // }
+  // console.log(dayArrayB)
+
   for (let i = 0; i < daysB.length; i++) {
     let bool =
-      daysB[i].getDate() === props.value.getDate() &&
-      daysB[i].getMonth() === props.value.getMonth() &&
-      daysB[i].getFullYear() === props.value.getFullYear();
+    (daysB[i].getDate() === props.value.getDate() &&
+    daysB[i].getMonth() === props.value.getMonth() &&
+    daysB[i].getFullYear() === props.value.getFullYear()) 
     dayArrayB.push(bool);
   }
+  // console.log(dayArrayB)
   const sumB = dayArrayB.reduce((previous, current) => previous || current);
   const clickCal = () => {
     if (
@@ -104,6 +81,7 @@ export default function Customdatecelwrapper(props) {
         let addarray = [];
         addarray = daysB.concat(props.value);
         setDaysB(addarray);
+        dispatch(bDateUpdate(addarray));
       } else {
         let deletearray = [];
         deletearray = daysB.filter(
@@ -113,6 +91,7 @@ export default function Customdatecelwrapper(props) {
             e.getDate() !== props.value.getDate()
         );
         setDaysB(deletearray);
+        dispatch(bDateUpdate(deletearray));
       }
     } else {
       alert("취소되었습니다.");

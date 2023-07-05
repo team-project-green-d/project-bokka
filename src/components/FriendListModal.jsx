@@ -11,7 +11,7 @@ import friendlist from '../css/friendlist.module.scss'
 import AddFriend from "../components/AddFriend";
 import AddGroupSample from "../components/AddGroupSample";
 import FriendProfileModal from '../components/FriendProfileModal';
-import { deletefriendList, getfriendList, noSessionfriendList } from "../slice/friendSlice";
+import { getfriendList } from "../slice/friendSlice";
 import { updateBtn } from "../slice/listArrayslice";
 
 import { LuX } from "react-icons/lu";
