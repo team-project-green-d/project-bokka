@@ -12,11 +12,14 @@ export default function FriendCheckbox({ f, checkFriends, selectFriends }) {
     // console.log(selectFid)
 
     const dispatch = useDispatch();
-
+    const friendData = JSON.parse(sessionStorage.getItem('friend'));
+    
     // 친구 삭제
-    const deleteFriend = (name, index) => {
+    const deleteFriend = (name, fid) => {
         if (window.confirm(`${name}님을 차단하시겠습니까?`)) {
-            dispatch(deletefriendList(index));
+            const findArr = friendData.findIndex(f => (f.fid === fid));
+            // console.log(findArr);
+            dispatch(deletefriendList(findArr));
         }
     };
 
